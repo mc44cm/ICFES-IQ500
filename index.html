@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICFES IQ500 | Plataforma Saber 11</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <nav class="nav">
+    <a class="brand" href="#inicio">🧠 ICFES <span>IQ500</span></a>
+    <div class="nav-links">
+      <a href="#temarios">Temarios</a>
+      <a href="#clases">Clases</a>
+      <a href="#progreso">Progreso</a>
+      <a href="#gratis">Gratis</a>
+      <a href="#curso">Curso</a>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero">
+    <section class="hero-content">
+      <p class="eyebrow">🚀 Prepárate para el ICFES Saber 11</p>
+      <h1>Estudia más inteligente con <span>ICFES IQ500</span></h1>
+      <p class="moving-text">📚 Temarios claros · 🎥 Clases grabadas · ✅ Progreso visible · 🏆 Simulacros</p>
+      <p class="hero-copy">
+        Una plataforma moderna, bonita e intuitiva para estudiantes que quieren subir su puntaje con clases,
+        material gratuito, formularios, PDFs resueltos y un curso intensivo.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#clases">Ver clase gratis ▶️</a>
+        <a class="btn secondary" href="#curso">Inscribirme al curso 🔥</a>
+      </div>
+    </section>
+
+    <section class="hero-card glass">
+      <h2>Tu ruta IQ500</h2>
+      <div class="score-ring">
+        <span id="progressPercent">0%</span>
+        <small>progreso</small>
+      </div>
+      <p>Marca las clases, PDFs y simulacros que completes. Tu avance se guarda automáticamente en este navegador.</p>
+    </section>
+  </header>
+
+  <main>
+    <section id="temarios" class="section">
+      <p class="tag">📌 Contenido por áreas</p>
+      <h2>Temarios Saber 11</h2>
+      <p class="subtitle">Organiza tu preparación por materia y enfócate en lo que más se evalúa.</p>
+      <div class="grid cards">
+        <article class="card"><span>📖</span><h3>Lectura Crítica</h3><p>Ideas principales, inferencias, intención del autor y análisis de textos.</p></article>
+        <article class="card"><span>🧮</span><h3>Matemáticas</h3><p>Razones, porcentajes, álgebra, geometría, funciones y estadística.</p></article>
+        <article class="card"><span>🔬</span><h3>Ciencias Naturales</h3><p>Física, química, biología, gráficas y pensamiento científico.</p></article>
+        <article class="card"><span>🌎</span><h3>Sociales</h3><p>Historia, geografía, ciudadanía, Constitución y análisis social.</p></article>
+        <article class="card"><span>🇬🇧</span><h3>Inglés</h3><p>Vocabulario, gramática básica y comprensión lectora.</p></article>
+      </div>
+    </section>
+
+    <section id="clases" class="section dark-section">
+      <p class="tag">🎬 Aula virtual</p>
+      <h2>Clases grabadas estilo plataforma</h2>
+      <p class="subtitle light">Mira los videos, descarga la solución y marca tu avance.</p>
+
+      <div class="lesson-layout">
+        <article class="video-panel">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/bo3ExGF0hjE" title="Preguntas ICFES Matemáticas" allowfullscreen></iframe>
+          </div>
+          <div class="lesson-info">
+            <div>
+              <p class="mini">Clase gratuita</p>
+              <h3>🧮 Preguntas ICFES Matemáticas</h3>
+              <p>Ejercicios tipo Saber 11 explicados paso a paso.</p>
+            </div>
+            <a class="btn primary" href="pdfs/clase-1-matematicas-solucion.pdf" target="_blank">📄 Descargar PDF resuelto</a>
+          </div>
+        </article>
+
+        <aside class="playlist glass-dark">
+          <h3>📚 Ruta de clase</h3>
+          <label class="check-item"><input type="checkbox" data-progress="Ver video de matemáticas"> <span>Ver video de matemáticas</span></label>
+          <label class="check-item"><input type="checkbox" data-progress="Descargar PDF resuelto"> <span>Descargar PDF resuelto</span></label>
+          <label class="check-item"><input type="checkbox" data-progress="Resolver preguntas"> <span>Resolver preguntas en el cuaderno</span></label>
+          <label class="check-item"><input type="checkbox" data-progress="Revisar errores"> <span>Revisar errores y repetir</span></label>
+        </aside>
+      </div>
+    </section>
+
+    <section id="progreso" class="section">
+      <p class="tag">✅ Seguimiento</p>
+      <h2>Checklist de progreso IQ500</h2>
+      <p class="subtitle">Marca lo que ya hiciste. El avance se guarda automáticamente con localStorage.</p>
+
+      <div class="progress-box glass">
+        <div class="progress-top">
+          <h3>Mi avance</h3>
+          <strong id="progressText">0 de 12 completados</strong>
+        </div>
+        <div class="bar"><div id="barFill"></div></div>
+      </div>
+
+      <div class="grid checklist-grid">
+        <label class="task"><input type="checkbox" data-progress="Lectura crítica tema 1"> 📖 Estudié lectura crítica</label>
+        <label class="task"><input type="checkbox" data-progress="Matemáticas tema 1"> 🧮 Estudié matemáticas</label>
+        <label class="task"><input type="checkbox" data-progress="Ciencias tema 1"> 🔬 Estudié ciencias naturales</label>
+        <label class="task"><input type="checkbox" data-progress="Sociales tema 1"> 🌎 Estudié sociales</label>
+        <label class="task"><input type="checkbox" data-progress="Inglés tema 1"> 🇬🇧 Estudié inglés</label>
+        <label class="task"><input type="checkbox" data-progress="Hice simulacro"> 📝 Hice un mini simulacro</label>
+        <label class="task"><input type="checkbox" data-progress="Corregí simulacro"> 🔍 Corregí mis respuestas</label>
+        <label class="task"><input type="checkbox" data-progress="Repasé errores"> 🔁 Repasé mis errores</label>
+      </div>
+
+      <button class="btn reset" id="resetProgress">Reiniciar progreso</button>
+    </section>
+
+    <section id="gratis" class="section free-section">
+      <p class="tag">🎁 Recursos libres</p>
+      <h2>Material gratuito</h2>
+      <div class="grid cards">
+        <article class="card"><span>📝</span><h3>Formularios gratuitos</h3><p>Agrega aquí tus Google Forms con preguntas tipo ICFES.</p><a class="btn secondary" href="#">Abrir formulario</a></article>
+        <article class="card"><span>📂</span><h3>PDFs de estudio</h3><p>Guías, soluciones y ejercicios descargables.</p><a class="btn secondary" href="pdfs/clase-1-matematicas-solucion.pdf" target="_blank">Ver PDF</a></article>
+        <article class="card"><span>⚡</span><h3>Mini simulacros</h3><p>Prácticas cortas para medir tu nivel semanal.</p><a class="btn secondary" href="#">Practicar</a></article>
+      </div>
+    </section>
+
+    <section id="curso" class="section course-section">
+      <p class="tag white">🔥 Curso pago</p>
+      <h2>Curso intensivo ICFES IQ500</h2>
+      <p class="subtitle light">Del 29 de junio al 24 de julio.</p>
+      <article class="price-card">
+        <p class="offer">OFERTA ESPECIAL</p>
+        <h3>Curso completo Saber 11</h3>
+        <div class="price">$200.000</div>
+        <p class="date">📅 Inicio: 29 de junio · Final: 24 de julio</p>
+        <div class="features">
+          <p>✅ Clases en vivo</p>
+          <p>✅ Todas las clases quedan grabadas</p>
+          <p>✅ Simulacros tipo ICFES</p>
+          <p>✅ Material de estudio descargable</p>
+          <p>✅ PDFs con solución paso a paso</p>
+          <p>✅ Acompañamiento durante el curso</p>
+        </div>
+        <a class="btn primary big" href="https://wa.me/573000000000" target="_blank">Inscribirme por WhatsApp 🚀</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <strong>🧠 ICFES IQ500</strong>
+    <p>Preparación inteligente para Saber 11 Colombia 🇨🇴</p>
+  </footer>
+
+  <a class="float-whatsapp" href="https://wa.me/573000000000" target="_blank">💬 Inscribirme</a>
+  <script src="script.js"></script>
+</body>
+</html>
