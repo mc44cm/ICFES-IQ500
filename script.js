@@ -1,47 +1,15 @@
-const WOMPI_LINK = ""; // Pega aquí tu link de cobro Wompi. Ejemplo: https://checkout.wompi.co/l/xxxxx
-const $ = s => document.querySelector(s);
-const $$ = s => [...document.querySelectorAll(s)];
-const rawStore = {
-  get:k=>JSON.parse(localStorage.getItem(k)||'null'),
-  set:(k,v)=>localStorage.setItem(k,JSON.stringify(v)),
-  remove:k=>localStorage.removeItem(k)
-};
-function slug(s){return (s||'estudiante').trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || 'estudiante'}
-let currentProfile = rawStore.get('currentProfile') || 'estudiante';
-function key(k){return `iq500_${currentProfile}_${k}`}
-const store = {get:k=>rawStore.get(key(k)), set:(k,v)=>rawStore.set(key(k),v), remove:k=>rawStore.remove(key(k))};
-function toast(t){const el=$('#toast'); el.textContent=t; el.classList.add('show'); setTimeout(()=>el.classList.remove('show'),2200)}
-function update(){
-  const tasks=$$('.task'); let done=0;
-  tasks.forEach(t=>{t.checked=!!store.get('task_'+t.dataset.id); if(t.checked) done++});
-  const total=tasks.length; const pct=Math.round(done/total*100)||0;
-  $('#percent').textContent=pct+'%'; $('#points').textContent=done*50; $('#progressBar').style.width=pct+'%';
-  const today=new Date().toDateString(); let streak=store.get('streak')||0;
-  if(done>0 && store.get('lastDay')!==today){streak++; store.set('streak',streak); store.set('lastDay',today)}
-  $('#streak').textContent=store.get('streak')||0;
-}
-function loadProfile(){
-  const profileName = rawStore.get('profileName_'+currentProfile) || '';
-  if(profileName) $('#studentName').value=profileName;
-  const notes=store.get('notes'); $('#notes').value=notes || '';
-  update();
-}
-function saveProfile(){
-  const name=$('#studentName').value.trim() || 'Estudiante';
-  currentProfile=slug(name);
-  rawStore.set('currentProfile',currentProfile);
-  rawStore.set('profileName_'+currentProfile,name);
-  toast('👤 Perfil guardado. Tu progreso queda en este dispositivo.');
-  loadProfile();
-}
-$$('.task').forEach(t=>t.addEventListener('change',e=>{store.set('task_'+e.target.dataset.id,e.target.checked); toast(e.target.checked?'✅ Tarea completada +50 IQ':'Tarea desmarcada'); update();}));
-$('#saveName').onclick=saveProfile;
-$('#resetProfile').onclick=()=>{if(confirm('¿Seguro que quieres reiniciar el progreso de este perfil?')){$$('.task').forEach(t=>store.remove('task_'+t.dataset.id)); store.remove('notes'); store.remove('streak'); store.remove('lastDay'); toast('Progreso reiniciado'); loadProfile();}};
-$('#studentName').addEventListener('keydown',e=>{if(e.key==='Enter') saveProfile();});
-$('#notes').addEventListener('input',e=>store.set('notes',e.target.value));
-$('#themeBtn').onclick=()=>{document.body.classList.toggle('dark'); rawStore.set('dark',document.body.classList.contains('dark'))};
-if(rawStore.get('dark')) document.body.classList.add('dark');
-$('#menuBtn').onclick=()=>$('#navLinks').classList.toggle('open');
-$('#searchPdf').addEventListener('input',e=>{const q=e.target.value.toLowerCase(); $$('.resource-card').forEach(c=>c.style.display=c.dataset.title.includes(q)?'flex':'none')});
-$('#wompiBtn').onclick=(e)=>{if(!WOMPI_LINK){e.preventDefault(); toast('Configura tu link Wompi en script.js'); setTimeout(()=>location.href='https://wa.me/573007540786?text=Hola%2C%20quiero%20pagar%20el%20curso%20ICFES%20IQ500',900)}else{$('#wompiBtn').href=WOMPI_LINK;}};
-loadProfile();
+const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('nav'),themeBtn=document.getElementById('themeBtn');
+menuBtn?.addEventListener('click',()=>nav.classList.toggle('show'));
+nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('show')));
+const savedTheme=localStorage.getItem('iq500-theme'); if(savedTheme) document.documentElement.dataset.theme=savedTheme;
+themeBtn?.addEventListener('click',()=>{const d=document.documentElement; d.dataset.theme=d.dataset.theme==='dark'?'':'dark'; localStorage.setItem('iq500-theme',d.dataset.theme||'light');});
+const tasks=[
+['Diagnóstico inicial','Haz un mini simulacro y anota tus temas débiles.'],['Matemáticas: porcentajes','Repasa porcentajes, razones y proporciones.'],['Lectura crítica','Practica idea principal e intención del autor.'],['Biología básica','Repasa célula, ecosistemas y genética.'],['Inglés A1-A2','Vocabulario y lectura corta.'],['Simulacro corto','Responde 20 preguntas y revisa errores.'],['Repaso semanal','Organiza tus errores en una lista.'],['Álgebra','Ecuaciones, despejes y problemas.'],['Geometría','Áreas, perímetros, triángulos y gráficas.'],['Química','Materia, mezclas, enlaces y reacciones.'],['Sociales','Constitución, ciudadanía e historia.'],['Lectura crítica','Inferencias y preguntas de postura.'],['Mini simulacro','Haz un formulario y marca completado.'],['Descanso activo','Repasa solo errores difíciles.'],['Estadística','Promedios, tablas, gráficas y probabilidad.'],['Física','Movimiento, fuerza, energía y circuitos.'],['Biología','Sistemas del cuerpo y ambiente.'],['Inglés','Comprensión de textos y conectores.'],['Sociales','Análisis de fuentes y mapas.'],['Simulacro mixto','Practica todas las áreas.'],['Corrección','Revisa por qué fallaste cada pregunta.'],['Matemáticas intensivo','Problemas tipo ICFES con tiempo.'],['Lectura intensivo','Lee 3 textos y responde preguntas.'],['Ciencias intensivo','Interpreta gráficas y experimentos.'],['Sociales intensivo','Casos ciudadanos y contexto.'],['Inglés intensivo','Lecturas cortas y vocabulario.'],['Simulacro final 1','Hazlo con tiempo real.'],['Corrección final','Estudia tus 10 errores más repetidos.'],['Simulacro final 2','Busca mejorar tu tiempo.'],['Cierre motivacional','Duerme bien, prepara documentos y confía.']
+];
+const cal=document.getElementById('calendar');
+if(cal){cal.innerHTML=tasks.map((t,i)=>`<article class="day"><h3>Día ${i+1}<span>${i%7===5?'Simulacro':'Tarea'}</span></h3><b>${t[0]}</b><p>${t[1]}</p><label><input type="checkbox" data-progress="day-${i+1}"> Cumplí esta tarea</label></article>`).join('');}
+const all=()=>[...document.querySelectorAll('[data-progress]')];
+function load(){all().forEach(c=>c.checked=localStorage.getItem('iq500-'+c.dataset.progress)==='1');update();}
+function update(){const boxes=all(),done=boxes.filter(b=>b.checked).length,total=boxes.length||1,pct=Math.round(done*100/total),pts=done*50;document.getElementById('progressPercent').textContent=pct+'%';document.getElementById('iqPoints').textContent=pts;document.getElementById('mainProgress').style.width=pct+'%';const circle=document.querySelector('.circle'); if(circle) circle.style.background=`conic-gradient(#7c3aed ${pct*3.6}deg,#e2e8f0 0deg)`;const today=new Date().toDateString(),last=localStorage.getItem('iq500-lastday');if(last!==today){localStorage.setItem('iq500-lastday',today);localStorage.setItem('iq500-streak',String((parseInt(localStorage.getItem('iq500-streak')||'0')||0)+1));}document.getElementById('streakDays').textContent=localStorage.getItem('iq500-streak')||'1';}
+document.addEventListener('change',e=>{if(e.target.matches('[data-progress]')){localStorage.setItem('iq500-'+e.target.dataset.progress,e.target.checked?'1':'0');update();}});
+load();
