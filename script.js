@@ -1,15 +1,43 @@
-const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('nav'),themeBtn=document.getElementById('themeBtn');
-menuBtn?.addEventListener('click',()=>nav.classList.toggle('show'));
-nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('show')));
-const savedTheme=localStorage.getItem('iq500-theme'); if(savedTheme) document.documentElement.dataset.theme=savedTheme;
-themeBtn?.addEventListener('click',()=>{const d=document.documentElement; d.dataset.theme=d.dataset.theme==='dark'?'':'dark'; localStorage.setItem('iq500-theme',d.dataset.theme||'light');});
-const tasks=[
-['Diagnóstico inicial','Haz un mini simulacro y anota tus temas débiles.'],['Matemáticas: porcentajes','Repasa porcentajes, razones y proporciones.'],['Lectura crítica','Practica idea principal e intención del autor.'],['Biología básica','Repasa célula, ecosistemas y genética.'],['Inglés A1-A2','Vocabulario y lectura corta.'],['Simulacro corto','Responde 20 preguntas y revisa errores.'],['Repaso semanal','Organiza tus errores en una lista.'],['Álgebra','Ecuaciones, despejes y problemas.'],['Geometría','Áreas, perímetros, triángulos y gráficas.'],['Química','Materia, mezclas, enlaces y reacciones.'],['Sociales','Constitución, ciudadanía e historia.'],['Lectura crítica','Inferencias y preguntas de postura.'],['Mini simulacro','Haz un formulario y marca completado.'],['Descanso activo','Repasa solo errores difíciles.'],['Estadística','Promedios, tablas, gráficas y probabilidad.'],['Física','Movimiento, fuerza, energía y circuitos.'],['Biología','Sistemas del cuerpo y ambiente.'],['Inglés','Comprensión de textos y conectores.'],['Sociales','Análisis de fuentes y mapas.'],['Simulacro mixto','Practica todas las áreas.'],['Corrección','Revisa por qué fallaste cada pregunta.'],['Matemáticas intensivo','Problemas tipo ICFES con tiempo.'],['Lectura intensivo','Lee 3 textos y responde preguntas.'],['Ciencias intensivo','Interpreta gráficas y experimentos.'],['Sociales intensivo','Casos ciudadanos y contexto.'],['Inglés intensivo','Lecturas cortas y vocabulario.'],['Simulacro final 1','Hazlo con tiempo real.'],['Corrección final','Estudia tus 10 errores más repetidos.'],['Simulacro final 2','Busca mejorar tu tiempo.'],['Cierre motivacional','Duerme bien, prepara documentos y confía.']
-];
-const cal=document.getElementById('calendar');
-if(cal){cal.innerHTML=tasks.map((t,i)=>`<article class="day"><h3>Día ${i+1}<span>${i%7===5?'Simulacro':'Tarea'}</span></h3><b>${t[0]}</b><p>${t[1]}</p><label><input type="checkbox" data-progress="day-${i+1}"> Cumplí esta tarea</label></article>`).join('');}
-const all=()=>[...document.querySelectorAll('[data-progress]')];
-function load(){all().forEach(c=>c.checked=localStorage.getItem('iq500-'+c.dataset.progress)==='1');update();}
-function update(){const boxes=all(),done=boxes.filter(b=>b.checked).length,total=boxes.length||1,pct=Math.round(done*100/total),pts=done*50;document.getElementById('progressPercent').textContent=pct+'%';document.getElementById('iqPoints').textContent=pts;document.getElementById('mainProgress').style.width=pct+'%';const circle=document.querySelector('.circle'); if(circle) circle.style.background=`conic-gradient(#7c3aed ${pct*3.6}deg,#e2e8f0 0deg)`;const today=new Date().toDateString(),last=localStorage.getItem('iq500-lastday');if(last!==today){localStorage.setItem('iq500-lastday',today);localStorage.setItem('iq500-streak',String((parseInt(localStorage.getItem('iq500-streak')||'0')||0)+1));}document.getElementById('streakDays').textContent=localStorage.getItem('iq500-streak')||'1';}
-document.addEventListener('change',e=>{if(e.target.matches('[data-progress]')){localStorage.setItem('iq500-'+e.target.dataset.progress,e.target.checked?'1':'0');update();}});
-load();
+const checks=[...document.querySelectorAll('.progress-check')];
+const percent=document.getElementById('percent');
+const points=document.getElementById('points');
+const fill=document.getElementById('progressFill');
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+
+menuBtn?.addEventListener('click',()=>navLinks.classList.toggle('open'));
+
+function loadProgress(){
+  const saved=JSON.parse(localStorage.getItem('iq500_progress')||'{}');
+  checks.forEach(ch=>{
+    ch.checked=!!saved[ch.dataset.task];
+    ch.closest('.day-card').classList.toggle('done',ch.checked);
+  });
+  updateStats();
+}
+
+function saveProgress(){
+  const data={};
+  checks.forEach(ch=>data[ch.dataset.task]=ch.checked);
+  localStorage.setItem('iq500_progress',JSON.stringify(data));
+  localStorage.setItem('iq500_last_visit',new Date().toISOString());
+}
+
+function updateStats(){
+  const done=checks.filter(ch=>ch.checked).length;
+  const total=checks.length || 1;
+  const p=Math.round((done/total)*100);
+  percent.textContent=p+'%';
+  points.textContent=done*50;
+  fill.style.width=p+'%';
+}
+
+checks.forEach(ch=>{
+  ch.addEventListener('change',()=>{
+    ch.closest('.day-card').classList.toggle('done',ch.checked);
+    saveProgress();
+    updateStats();
+  });
+});
+
+loadProgress();

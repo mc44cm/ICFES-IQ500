@@ -1,21 +1,26 @@
-# ICFES IQ500 - Versión visual
+# ICFES IQ500
 
-Plataforma responsive para GitHub Pages con:
+Plataforma web lista para GitHub Pages.
 
-- Diseño bonito y claro para celular y computador.
-- Ruta de estudio de 30 días.
-- Video de YouTube incrustado.
-- Biblioteca de PDFs.
-- Mini simulacros en Google Forms.
-- Progreso con checkboxes guardado en el dispositivo.
+## Cómo subir
+
+1. Entra a tu repositorio de GitHub.
+2. Clic en `Add file` > `Upload files`.
+3. Sube todos los archivos de esta carpeta, no el ZIP.
+4. Clic en `Commit changes`.
+5. Ve a `Settings` > `Pages`.
+6. Source: `Deploy from a branch`.
+7. Branch: `main` y folder `/root`.
+8. Guarda y espera el enlace.
+
+## Incluye
+
+- Diseño responsive para celular y computador.
+- Lenguaje más comercial para estudiantes y padres.
+- Botón Wompi eliminado.
 - WhatsApp: 3007540786.
-- Botón de Wompi pendiente de reemplazar por el link real.
-
-## Subir a GitHub
-
-1. Descomprime el ZIP.
-2. En GitHub entra al repositorio.
-3. Add file > Upload files.
-4. Arrastra todo lo descomprimido.
-5. Commit changes.
-6. Settings > Pages > Deploy from branch > main > /root.
+- Video de YouTube.
+- Mini simulacros.
+- PDFs en carpeta `pdfs`.
+- Calendario de estudio de 30 días.
+- Progreso guardado con localStorage.
