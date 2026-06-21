@@ -1,161 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ICFES IQ500 | Plataforma Saber 11</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICFES IQ500 | Plataforma Saber 11</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg-orb orb-1"></div>
-  <div class="bg-orb orb-2"></div>
-  <div class="bg-orb orb-3"></div>
-
-  <nav class="nav">
-    <a class="brand" href="#inicio">🧠 ICFES <span>IQ500</span></a>
-    <div class="nav-links">
-      <a href="#temarios">Temarios</a>
-      <a href="#clases">Clases</a>
-      <a href="#progreso">Progreso</a>
-      <a href="#gratis">Gratis</a>
-      <a href="#curso">Curso</a>
-    </div>
-  </nav>
-
-  <header id="inicio" class="hero">
-    <section class="hero-content">
-      <p class="eyebrow">🚀 Prepárate para el ICFES Saber 11</p>
-      <h1>Estudia más inteligente con <span>ICFES IQ500</span></h1>
-      <p class="moving-text">📚 Temarios claros · 🎥 Clases grabadas · ✅ Progreso visible · 🏆 Simulacros</p>
-      <p class="hero-copy">
-        Una plataforma moderna, bonita e intuitiva para estudiantes que quieren subir su puntaje con clases,
-        material gratuito, formularios, PDFs resueltos y un curso intensivo.
-      </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#clases">Ver clase gratis ▶️</a>
-        <a class="btn secondary" href="#curso">Inscribirme al curso 🔥</a>
-      </div>
-    </section>
-
-    <section class="hero-card glass">
-      <h2>Tu ruta IQ500</h2>
-      <div class="score-ring">
-        <span id="progressPercent">0%</span>
-        <small>progreso</small>
-      </div>
-      <p>Marca las clases, PDFs y simulacros que completes. Tu avance se guarda automáticamente en este navegador.</p>
-    </section>
-  </header>
-
-  <main>
-    <section id="temarios" class="section">
-      <p class="tag">📌 Contenido por áreas</p>
-      <h2>Temarios Saber 11</h2>
-      <p class="subtitle">Organiza tu preparación por materia y enfócate en lo que más se evalúa.</p>
-      <div class="grid cards">
-        <article class="card"><span>📖</span><h3>Lectura Crítica</h3><p>Ideas principales, inferencias, intención del autor y análisis de textos.</p></article>
-        <article class="card"><span>🧮</span><h3>Matemáticas</h3><p>Razones, porcentajes, álgebra, geometría, funciones y estadística.</p></article>
-        <article class="card"><span>🔬</span><h3>Ciencias Naturales</h3><p>Física, química, biología, gráficas y pensamiento científico.</p></article>
-        <article class="card"><span>🌎</span><h3>Sociales</h3><p>Historia, geografía, ciudadanía, Constitución y análisis social.</p></article>
-        <article class="card"><span>🇬🇧</span><h3>Inglés</h3><p>Vocabulario, gramática básica y comprensión lectora.</p></article>
-      </div>
-    </section>
-
-    <section id="clases" class="section dark-section">
-      <p class="tag">🎬 Aula virtual</p>
-      <h2>Clases grabadas estilo plataforma</h2>
-      <p class="subtitle light">Mira los videos, descarga la solución y marca tu avance.</p>
-
-      <div class="lesson-layout">
-        <article class="video-panel">
-          <div class="video-frame">
-            <iframe src="https://www.youtube.com/embed/bo3ExGF0hjE" title="Preguntas ICFES Matemáticas" allowfullscreen></iframe>
-          </div>
-          <div class="lesson-info">
-            <div>
-              <p class="mini">Clase gratuita</p>
-              <h3>🧮 Preguntas ICFES Matemáticas</h3>
-              <p>Ejercicios tipo Saber 11 explicados paso a paso.</p>
-            </div>
-            <a class="btn primary" href="pdfs/clase-1-matematicas-solucion.pdf" target="_blank">📄 Descargar PDF resuelto</a>
-          </div>
-        </article>
-
-        <aside class="playlist glass-dark">
-          <h3>📚 Ruta de clase</h3>
-          <label class="check-item"><input type="checkbox" data-progress="Ver video de matemáticas"> <span>Ver video de matemáticas</span></label>
-          <label class="check-item"><input type="checkbox" data-progress="Descargar PDF resuelto"> <span>Descargar PDF resuelto</span></label>
-          <label class="check-item"><input type="checkbox" data-progress="Resolver preguntas"> <span>Resolver preguntas en el cuaderno</span></label>
-          <label class="check-item"><input type="checkbox" data-progress="Revisar errores"> <span>Revisar errores y repetir</span></label>
-        </aside>
-      </div>
-    </section>
-
-    <section id="progreso" class="section">
-      <p class="tag">✅ Seguimiento</p>
-      <h2>Checklist de progreso IQ500</h2>
-      <p class="subtitle">Marca lo que ya hiciste. El avance se guarda automáticamente con localStorage.</p>
-
-      <div class="progress-box glass">
-        <div class="progress-top">
-          <h3>Mi avance</h3>
-          <strong id="progressText">0 de 12 completados</strong>
-        </div>
-        <div class="bar"><div id="barFill"></div></div>
-      </div>
-
-      <div class="grid checklist-grid">
-        <label class="task"><input type="checkbox" data-progress="Lectura crítica tema 1"> 📖 Estudié lectura crítica</label>
-        <label class="task"><input type="checkbox" data-progress="Matemáticas tema 1"> 🧮 Estudié matemáticas</label>
-        <label class="task"><input type="checkbox" data-progress="Ciencias tema 1"> 🔬 Estudié ciencias naturales</label>
-        <label class="task"><input type="checkbox" data-progress="Sociales tema 1"> 🌎 Estudié sociales</label>
-        <label class="task"><input type="checkbox" data-progress="Inglés tema 1"> 🇬🇧 Estudié inglés</label>
-        <label class="task"><input type="checkbox" data-progress="Hice simulacro"> 📝 Hice un mini simulacro</label>
-        <label class="task"><input type="checkbox" data-progress="Corregí simulacro"> 🔍 Corregí mis respuestas</label>
-        <label class="task"><input type="checkbox" data-progress="Repasé errores"> 🔁 Repasé mis errores</label>
-      </div>
-
-      <button class="btn reset" id="resetProgress">Reiniciar progreso</button>
-    </section>
-
-    <section id="gratis" class="section free-section">
-      <p class="tag">🎁 Recursos libres</p>
-      <h2>Material gratuito</h2>
-      <div class="grid cards">
-        <article class="card"><span>📝</span><h3>Formularios gratuitos</h3><p>Agrega aquí tus Google Forms con preguntas tipo ICFES.</p><a class="btn secondary" href="#">Abrir formulario</a></article>
-        <article class="card"><span>📂</span><h3>PDFs de estudio</h3><p>Guías, soluciones y ejercicios descargables.</p><a class="btn secondary" href="pdfs/clase-1-matematicas-solucion.pdf" target="_blank">Ver PDF</a></article>
-        <article class="card"><span>⚡</span><h3>Mini simulacros</h3><p>Prácticas cortas para medir tu nivel semanal.</p><a class="btn secondary" href="#">Practicar</a></article>
-      </div>
-    </section>
-
-    <section id="curso" class="section course-section">
-      <p class="tag white">🔥 Curso pago</p>
-      <h2>Curso intensivo ICFES IQ500</h2>
-      <p class="subtitle light">Del 29 de junio al 24 de julio.</p>
-      <article class="price-card">
-        <p class="offer">OFERTA ESPECIAL</p>
-        <h3>Curso completo Saber 11</h3>
-        <div class="price">$200.000</div>
-        <p class="date">📅 Inicio: 29 de junio · Final: 24 de julio</p>
-        <div class="features">
-          <p>✅ Clases en vivo</p>
-          <p>✅ Todas las clases quedan grabadas</p>
-          <p>✅ Simulacros tipo ICFES</p>
-          <p>✅ Material de estudio descargable</p>
-          <p>✅ PDFs con solución paso a paso</p>
-          <p>✅ Acompañamiento durante el curso</p>
-        </div>
-        <a class="btn primary big" href="https://wa.me/573000000000" target="_blank">Inscribirme por WhatsApp 🚀</a>
-      </article>
-    </section>
-  </main>
-
-  <footer>
-    <strong>🧠 ICFES IQ500</strong>
-    <p>Preparación inteligente para Saber 11 Colombia 🇨🇴</p>
-  </footer>
-
-  <a class="float-whatsapp" href="https://wa.me/573000000000" target="_blank">💬 Inscribirme</a>
-  <script src="script.js"></script>
-</body>
-</html>
+<nav class="topbar"><a class="brand" href="#inicio">🧠 ICFES IQ500</a><button id="menuBtn">☰</button><div id="navLinks"><a href="#temario">Temario</a><a href="#calendario">Plan 30 días</a><a href="#clases">Clases</a><a href="#biblioteca">PDFs</a><a href="#simulacro">Simulacros</a><a href="#curso">Curso</a><button id="themeBtn">🌙</button></div></nav>
+<header id="inicio" class="hero"><div class="hero-text"><span class="pill">🇨🇴 Saber 11 · Prepárate inteligente</span><h1>Sube tu puntaje con una rutina diaria, clases y material gratuito.</h1><p class="move">✨ Aprende · ✅ Marca progreso · 🏆 Gana puntos IQ · 🔥 Mantén tu racha</p><div class="hero-actions"><a href="#calendario" class="btn primary">Empezar plan de 30 días</a><a href="#curso" class="btn ghost">Ver curso intensivo</a></div></div><div class="profile-card"><h2>👤 Mi perfil de estudiante</h2><p>Escribe tu nombre para guardar tu progreso aunque cierres la app. Cada estudiante puede tener su propio perfil en este dispositivo.</p><input id="studentName" placeholder="Nombre del estudiante"><button id="saveName" class="btn primary full">Entrar / guardar perfil</button><button id="resetProfile" class="btn ghost full" type="button">Reiniciar mi progreso</button><div class="stats"><div><b id="points">0</b><span>Puntos IQ</span></div><div><b id="streak">0</b><span>Racha</span></div><div><b id="percent">0%</b><span>Progreso</span></div></div></div></header>
+<main>
+<section id="temario"><h2>📚 Temario completo</h2><p class="sub">Organizado por áreas para estudiar durante un mes.</p><div class="grid cards"><article><span>🧮</span><h3>Matemáticas</h3><p>Álgebra, geometría, estadística, razones, porcentajes y problemas.</p></article><article><span>📖</span><h3>Lectura crítica</h3><p>Idea principal, inferencias, intención del autor, argumentos y conclusión.</p></article><article><span>🔬</span><h3>Ciencias naturales</h3><p>Biología, química, física, gráficas, tablas y pensamiento científico.</p></article><article><span>🌎</span><h3>Sociales</h3><p>Ciudadanía, historia, geografía, Constitución y análisis social.</p></article><article><span>🇬🇧</span><h3>Inglés</h3><p>Vocabulario, conectores, lectura y comprensión de textos.</p></article></div></section>
+<section id="calendario" class="soft"><h2>📅 Calendario de estudio en 30 días</h2><p class="sub">Marca cada tarea. Cada día cumplido suma puntos y te motiva a seguir.</p><div class="progress-wrap"><div id="progressBar"></div></div><div class="day-grid"><article class="day-card"><label><input type="checkbox" class="task" data-id="plan-1"><span></span></label><div><b>Día 1</b><h3>Diagnóstico inicial + metas</h3><p>Haz un mini simulacro y escribe tu puntaje meta.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-2"><span></span></label><div><b>Día 2</b><h3>Matemáticas: razones y proporciones</h3><p>Resuelve ejercicios de regla de tres y porcentajes.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-3"><span></span></label><div><b>Día 3</b><h3>Lectura crítica: idea principal</h3><p>Lee 2 textos cortos y encuentra tesis, argumentos y conclusión.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-4"><span></span></label><div><b>Día 4</b><h3>Biología: célula y transporte</h3><p>Estudia membrana, ósmosis, transporte activo y pasivo.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-5"><span></span></label><div><b>Día 5</b><h3>Sociales: ciudadanía</h3><p>Repasa derechos, deberes y Constitución.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-6"><span></span></label><div><b>Día 6</b><h3>Inglés: vocabulario base</h3><p>Practica lectura rápida y conectores básicos.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-7"><span></span></label><div><b>Día 7</b><h3>Repaso semanal 1</h3><p>Completa tareas pendientes y revisa errores.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-8"><span></span></label><div><b>Día 8</b><h3>Matemáticas: álgebra</h3><p>Ecuaciones, funciones y expresiones equivalentes.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-9"><span></span></label><div><b>Día 9</b><h3>Física: fuerzas y Newton</h3><p>Diagramas de fuerza y equilibrio.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-10"><span></span></label><div><b>Día 10</b><h3>Química: materia y mezclas</h3><p>Sustancias, métodos de separación y lectura de tablas.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-11"><span></span></label><div><b>Día 11</b><h3>Lectura crítica: inferencias</h3><p>Practica preguntas de intención del autor.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-12"><span></span></label><div><b>Día 12</b><h3>Estadística</h3><p>Promedios, porcentajes, tablas y gráficas.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-13"><span></span></label><div><b>Día 13</b><h3>Biología: genética/evolución</h3><p>Practica interpretación de árboles y conceptos clave.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-14"><span></span></label><div><b>Día 14</b><h3>Simulacro corto 1</h3><p>Responde por tiempo y anota tus errores.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-15"><span></span></label><div><b>Día 15</b><h3>Geometría</h3><p>Áreas, perímetros, triángulos y figuras.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-16"><span></span></label><div><b>Día 16</b><h3>Física: energía</h3><p>Energía cinética, potencial y conservación.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-17"><span></span></label><div><b>Día 17</b><h3>Sociales: historia y contexto</h3><p>Analiza causas, consecuencias y actores.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-18"><span></span></label><div><b>Día 18</b><h3>Inglés: comprensión</h3><p>Responde textos tipo ICFES.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-19"><span></span></label><div><b>Día 19</b><h3>Matemáticas: problemas mixtos</h3><p>Mezcla álgebra, geometría y estadística.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-20"><span></span></label><div><b>Día 20</b><h3>Química y biología repaso</h3><p>Haz resumen de conceptos y ejercicios.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-21"><span></span></label><div><b>Día 21</b><h3>Repaso semanal 2</h3><p>Corrige errores de simulacros y refuerza debilidades.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-22"><span></span></label><div><b>Día 22</b><h3>Lectura crítica avanzada</h3><p>Textos argumentativos y preguntas difíciles.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-23"><span></span></label><div><b>Día 23</b><h3>Ciencias naturales mixtas</h3><p>Física + química + biología con gráficas.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-24"><span></span></label><div><b>Día 24</b><h3>Sociales y ciudadanas mixtas</h3><p>Casos ciudadanos y análisis social.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-25"><span></span></label><div><b>Día 25</b><h3>Simulacro corto 2</h3><p>Entrena manejo del tiempo.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-26"><span></span></label><div><b>Día 26</b><h3>Revisión de errores</h3><p>Clasifica errores: concepto, lectura o tiempo.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-27"><span></span></label><div><b>Día 27</b><h3>Repaso de fórmulas</h3><p>Haz una hoja resumen de matemáticas y física.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-28"><span></span></label><div><b>Día 28</b><h3>Preguntas difíciles</h3><p>Resuelve solo preguntas que antes te salieron mal.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-29"><span></span></label><div><b>Día 29</b><h3>Simulacro final</h3><p>Haz simulacro completo o por áreas.</p></div></article>
+<article class="day-card"><label><input type="checkbox" class="task" data-id="plan-30"><span></span></label><div><b>Día 30</b><h3>Cierre y estrategia de examen</h3><p>Duerme bien, prepara documentos y define estrategia.</p></div></article></div></section>
+<section id="clases"><h2>🎥 Clases grabadas estilo plataforma</h2><p class="sub">Video conectado desde YouTube para que funcione rápido en celular y computador.</p><div class="video-panel"><iframe src="https://www.youtube.com/embed/bo3ExGF0hjE" title="Clase de matemáticas ICFES" allowfullscreen></iframe><div><span class="pill">Clase destacada</span><h3>Preguntas ICFES Matemáticas</h3><p>Repasa ejercicios resueltos paso a paso. Mira el video y luego descarga el PDF de soluciones.</p><label class="big-check"><input type="checkbox" class="task" data-id="video-matematicas"><span>Ya vi esta clase</span></label></div></div></section>
+<section id="biblioteca" class="soft"><h2>📂 Biblioteca de PDFs</h2><p class="sub">Material, talleres y soluciones cargados en la plataforma.</p><input id="searchPdf" class="search" placeholder="Buscar PDF por tema: física, biología, álgebra..."><div class="resource-grid" id="pdfGrid"><a class="resource-card" href="pdfs/Algebra_Clase_4.pdf" target="_blank" data-title="algebra_clase_4.pdf"><span>📄</span><strong>Algebra Clase 4</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Biologia_Clase_1.pdf" target="_blank" data-title="biologia_clase_1.pdf"><span>📄</span><strong>Biologia Clase 1</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Clase_1_Matematicas_Soluciones.pdf" target="_blank" data-title="clase_1_matematicas_soluciones.pdf"><span>📄</span><strong>Clase 1 Matematicas Soluciones</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Ejercicios_en_clase_Biologia_Clase_2.pdf" target="_blank" data-title="ejercicios_en_clase_biologia_clase_2.pdf"><span>📄</span><strong>Ejercicios en clase Biologia Clase 2</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Ejercicios_en_clase_Clase_1.pdf" target="_blank" data-title="ejercicios_en_clase_clase_1.pdf"><span>📄</span><strong>Ejercicios en clase Clase 1</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Ejercicios_en_clase_Clase_1_Biologia.pdf" target="_blank" data-title="ejercicios_en_clase_clase_1_biologia.pdf"><span>📄</span><strong>Ejercicios en clase Clase 1 Biologia</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Ejercicios_en_clase_Clase_1_Quimica.pdf" target="_blank" data-title="ejercicios_en_clase_clase_1_quimica.pdf"><span>📄</span><strong>Ejercicios en clase Clase 1 Quimica</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Ejercicios_en_clase_Clase_2.pdf" target="_blank" data-title="ejercicios_en_clase_clase_2.pdf"><span>📄</span><strong>Ejercicios en clase Clase 2</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Ejercicios_en_clase_Clase_3.pdf" target="_blank" data-title="ejercicios_en_clase_clase_3.pdf"><span>📄</span><strong>Ejercicios en clase Clase 3</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Ejercicios_en_clase_Clase_4.pdf" target="_blank" data-title="ejercicios_en_clase_clase_4.pdf"><span>📄</span><strong>Ejercicios en clase Clase 4</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Estadistica_Clase_2.pdf" target="_blank" data-title="estadistica_clase_2.pdf"><span>📄</span><strong>Estadistica Clase 2</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Fisica_Clase_2.pdf" target="_blank" data-title="fisica_clase_2.pdf"><span>📄</span><strong>Fisica Clase 2</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Fisica_Clase_3.pdf" target="_blank" data-title="fisica_clase_3.pdf"><span>📄</span><strong>Fisica Clase 3</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Geometria_Clase_3.pdf" target="_blank" data-title="geometria_clase_3.pdf"><span>📄</span><strong>Geometria Clase 3</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Practica_Clase_1.pdf" target="_blank" data-title="practica_clase_1.pdf"><span>📄</span><strong>Practica Clase 1</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Resumen_Clase_1.pdf" target="_blank" data-title="resumen_clase_1.pdf"><span>📄</span><strong>Resumen Clase 1</strong><small>Ver / descargar PDF</small></a>
+<a class="resource-card" href="pdfs/Taller_Biologia_Clase_1.pdf" target="_blank" data-title="taller_biologia_clase_1.pdf"><span>📄</span><strong>Taller Biologia Clase 1</strong><small>Ver / descargar PDF</small></a></div></section>
+<section id="simulacro"><h2>📝 Mini simulacros</h2><p class="sub">Responde los mini simulacros en Google Forms y luego marca cada uno como completado para sumar puntos IQ.</p><div class="grid cards">
+<article><span>⚡</span><h3>Mini simulacro 1</h3><p>Practica preguntas tipo ICFES y revisa tus errores.</p><a class="btn primary full" href="https://forms.gle/H8V15DC2iFbXqsAr6" target="_blank">Abrir mini simulacro</a><label class="big-check"><input type="checkbox" class="task" data-id="mini-simulacro-1"><span>Completado</span></label></article>
+<article><span>🧠</span><h3>Mini simulacro 2</h3><p>Entrena comprensión, cálculo y toma de decisiones.</p><a class="btn primary full" href="https://forms.gle/9ZR727bmNLUEY4qC7" target="_blank">Abrir mini simulacro</a><label class="big-check"><input type="checkbox" class="task" data-id="mini-simulacro-2"><span>Completado</span></label></article>
+<article><span>📚</span><h3>Mini simulacro 3</h3><p>Resuelve por tiempo y anota qué debes reforzar.</p><a class="btn primary full" href="https://forms.gle/nMJRPrBLggJDwjNv7" target="_blank">Abrir mini simulacro</a><label class="big-check"><input type="checkbox" class="task" data-id="mini-simulacro-3"><span>Completado</span></label></article>
+<article><span>🎯</span><h3>Mini simulacro 4</h3><p>Fortalece estrategia y manejo del tiempo.</p><a class="btn primary full" href="https://forms.gle/gAQCycMekwuRr1ha7" target="_blank">Abrir mini simulacro</a><label class="big-check"><input type="checkbox" class="task" data-id="mini-simulacro-4"><span>Completado</span></label></article>
+<article><span>🏆</span><h3>Mini simulacro 5</h3><p>Completa el reto y conserva tu racha de estudio.</p><a class="btn primary full" href="https://forms.gle/MrPaJbR9JZ7nNWB7A" target="_blank">Abrir mini simulacro</a><label class="big-check"><input type="checkbox" class="task" data-id="mini-simulacro-5"><span>Completado</span></label></article>
+<article><span>📝</span><h3>Diario de errores</h3><p>Escribe qué fallaste: tema, lectura, tiempo o fórmula.</p><textarea id="notes" placeholder="Mis errores y aprendizajes..."></textarea></article>
+</div></section>
+<section id="curso" class="course"><div class="price-card"><span class="pill light">🔥 Curso intensivo</span><h2>Curso ICFES IQ500</h2><div class="price">$200.000</div><p class="date">📅 Del 29 de junio al 24 de julio</p><div class="features"><p>✅ Clases en vivo que quedan grabadas</p><p>✅ Simulacros tipo ICFES</p><p>✅ Material de estudio descargable</p><p>✅ Calendario diario de preparación</p><p>✅ Acompañamiento y motivación</p></div><div class="pay-row"><a class="btn primary" href="https://wa.me/573007540786?text=Hola%2C%20quiero%20inscribirme%20al%20curso%20ICFES%20IQ500" target="_blank">WhatsApp 3007540786</a><a id="wompiBtn" class="btn pay" href="#">Pagar con Wompi</a></div><p class="mini">Para activar Wompi real, reemplaza el enlace en <b>script.js</b> por tu link de cobro de Wompi.</p></div></section>
+</main>
+<footer>ICFES IQ500 · Plataforma responsive para celular y computador · Hecha para GitHub Pages</footer>
+<div id="toast"></div><script src="script.js"></script>
+</body></html>
