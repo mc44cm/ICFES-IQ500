@@ -11,13 +11,11 @@ function saved(){
   try{return JSON.parse(localStorage.getItem('iq500_video_progress')||'{}')}
   catch{return {}}
 }
-
 function save(){
   const d={};
   checks.forEach(c=>d[c.dataset.task]=c.checked);
   localStorage.setItem('iq500_video_progress',JSON.stringify(d));
 }
-
 function update(){
   const done=checks.filter(c=>c.checked).length;
   const total=checks.length||1;
@@ -30,12 +28,10 @@ function update(){
     c.closest('.topic-item')?.classList.toggle('done',c.checked);
   });
 }
-
 function load(){
   const d=saved();
   checks.forEach(c=>c.checked=!!d[c.dataset.task]);
   update();
 }
-
 checks.forEach(c=>c.addEventListener('change',()=>{save();update()}));
 load();

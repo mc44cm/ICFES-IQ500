@@ -1,45 +1,36 @@
-# ICFES IQ500 - GitHub Pages
+# ICFES IQ500 - listo para GitHub
 
-Plataforma lista para subir a GitHub Pages.
+## Contenido
 
-## Incluye
-
-- `index.html`
-- `style.css`
-- `script.js`
-- carpeta `pdfs/`
+- index.html
+- style.css
+- script.js
+- carpeta pdfs
 - calendario de 30 días
-- una materia por día
-- checkbox por tema
+- PDFs en el calendario
+- PDFs en sección independiente de guías
 - videos recomendados por tema
-- PDFs dentro del calendario y también en sección de guías
 - mini simulacros
-- WhatsApp 3007540786
-- progreso guardado localmente con `localStorage["iq500_video_progress"]`
+- progreso guardado localmente
+- WhatsApp: 3007540786
 
 ## PDFs incluidos
 
-Total: 2
+Total sin duplicados por contenido: 17
 
 ## Cómo subir a GitHub
 
 1. Descomprime este ZIP.
-2. Entra a tu repositorio.
-3. Pulsa `Add file` > `Upload files`.
-4. Sube el contenido descomprimido, no el ZIP cerrado.
-5. Deben quedar en la raíz:
-   - `index.html`
-   - `style.css`
-   - `script.js`
-   - `README.md`
-   - carpeta `pdfs`
-6. Pulsa `Commit changes`.
-7. Ve a `Settings` > `Pages`.
-8. Source: `Deploy from a branch`.
-9. Branch: `main` y folder `/root`.
-10. Guarda y espera el enlace.
+2. Entra al repositorio.
+3. Presiona `Add file` > `Upload files`.
+4. Sube TODO el contenido descomprimido.
+5. Deben quedar visibles en la raíz:
+   - index.html
+   - style.css
+   - script.js
+   - README.md
+   - pdfs
+6. Presiona `Commit changes`.
+7. Activa GitHub Pages en Settings > Pages.
 
-## Importante para no perder progreso
-
-No cambies los valores `data-task="t1"`, `data-task="t2"`, etc.  
-Tampoco cambies la clave `iq500_video_progress`.
+No subas el ZIP cerrado.
