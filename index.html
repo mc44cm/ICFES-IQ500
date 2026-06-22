@@ -1,45 +1,886 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ICFES IQ500</title><link rel="stylesheet" href="style.css"></head><body>
-<div class="orb orb1"></div><div class="orb orb2"></div>
-<nav class="navbar"><a class="brand" href="#inicio">ICFES <span>IQ500</span></a><button id="menuBtn" class="menu-btn">☰</button><div class="nav-links" id="navLinks"><a href="#temario">Temario</a><a href="#clases">Clases</a><a href="#material">PDFs</a><a href="#simulacros">Mini simulacros</a><a href="#curso">Curso</a></div></nav>
-<header class="hero" id="inicio"><section><span class="badge">🚀 Preparación inteligente Saber 11</span><h1>Estudia con orden y alcanza tu mejor puntaje en el ICFES</h1><p>Una ruta clara de 30 días: una sola materia por día, pocos temas, videos recomendados, PDFs y progreso visible para avanzar sin saturarte.</p><div class="actions"><a class="btn primary" href="#temario">Ver calendario</a><a class="btn secondary" href="#curso">Curso intensivo</a></div><div class="stats"><div><strong id="progressPercent">0%</strong><small>avance</small></div><div><strong id="points">0</strong><small>puntos IQ</small></div><div><strong>30</strong><small>días</small></div></div></section><aside class="hero-panel"><h2>🎯 Tu progreso importa</h2><p>Marca cada tema completado. Tu avance se guarda automáticamente en este celular o computador aunque cierres la página.</p><div class="progress"><span id="progressBar"></span></div><small>Para guardar progreso en varios dispositivos se puede conectar Firebase o Supabase.</small></aside></header>
-<main>
-<section class="section"><h2>Una experiencia más clara para estudiar</h2><p class="subtitle">El estudiante entra, mira el día, estudia los temas y marca su avance.</p><div class="feature-grid"><article><span>📅</span><h3>Un día, una materia</h3><p>Menos saturación y más enfoque.</p></article><article><span>🎥</span><h3>Videos recomendados</h3><p>Cada tema tiene un enlace directo a YouTube.</p></article><article><span>📄</span><h3>PDFs organizados</h3><p>Material listo para abrir.</p></article><article><span>🏆</span><h3>Puntos IQ500</h3><p>Cada tema completado suma puntos.</p></article></div></section>
-<section class="section" id="temario"><h2>📅 Temario de 30 días</h2><p class="subtitle">Una materia por día y pocos temas por jornada. Cada tema tiene checkbox y video recomendado.</p><div class="calendar-grid"><article class="day-card"><div class="day-head"><span>Día 1</span><b>📖</b></div><h3>Lectura Crítica</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t1"><span>Idea principal</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+idea+principal+lectura+cr%C3%ADtica+ICFES" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t2"><span>Idea secundaria</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+idea+secundaria+lectura+cr%C3%ADtica+ICFES" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 2</span><b>🧮</b></div><h3>Matemáticas</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t3"><span>Razones y proporciones</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+razones+y+proporciones" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t4"><span>Regla de tres</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+regla+de+tres" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 3</span><b>🧬</b></div><h3>Biología</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t5"><span>La célula</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+la+c%C3%A9lula" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t6"><span>Organelos celulares</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+organelos+celulares" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 4</span><b>🧪</b></div><h3>Química</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t7"><span>La materia</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+la+materia+qu%C3%ADmica" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t8"><span>Propiedades físicas y químicas</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Quimitube+propiedades+f%C3%ADsicas+y+qu%C3%ADmicas" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 5</span><b>⚡</b></div><h3>Física</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t9"><span>Magnitudes físicas</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+magnitudes+f%C3%ADsicas" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t10"><span>Sistema Internacional</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+sistema+internacional+de+unidades" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 6</span><b>🌎</b></div><h3>Sociales</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t11"><span>Constitución Política</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Constituci%C3%B3n+Pol%C3%ADtica+Colombia+ICFES+sociales" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t12"><span>Derechos fundamentales</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Derechos+fundamentales+Colombia+ICFES+sociales" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 7</span><b>🇬🇧</b></div><h3>Inglés</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t13"><span>Verb to be</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+verb+to+be" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t14"><span>Present simple</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+present+simple" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 8</span><b>📖</b></div><h3>Lectura Crítica</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t15"><span>Inferencias</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+inferencias+lectura+cr%C3%ADtica+ICFES" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t16"><span>Intención del autor</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+intenci%C3%B3n+del+autor+lectura+cr%C3%ADtica" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 9</span><b>🧮</b></div><h3>Matemáticas</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t17"><span>Porcentajes</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+porcentajes" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t18"><span>Aumentos y descuentos</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+aumentos+descuentos+porcentajes" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 10</span><b>🧬</b></div><h3>Biología</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t19"><span>ADN y ARN</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+ADN+ARN" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t20"><span>Genética básica</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+gen%C3%A9tica+b%C3%A1sica" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 11</span><b>🧪</b></div><h3>Química</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t21"><span>Átomos</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+%C3%A1tomo+qu%C3%ADmica" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t22"><span>Tabla periódica</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+tabla+peri%C3%B3dica" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 12</span><b>⚡</b></div><h3>Física</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t23"><span>Movimiento rectilíneo uniforme</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+movimiento+rectil%C3%ADneo+uniforme" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t24"><span>Velocidad y distancia</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+velocidad+distancia+tiempo" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 13</span><b>🌎</b></div><h3>Sociales</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t25"><span>Estado colombiano</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Estado+colombiano+ICFES+sociales" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t26"><span>Participación ciudadana</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Participaci%C3%B3n+ciudadana+ICFES+sociales" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 14</span><b>🇬🇧</b></div><h3>Inglés</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t27"><span>Vocabulario básico</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+vocabulario+b%C3%A1sico+ingl%C3%A9s" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t28"><span>Comprensión de textos cortos</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+reading+comprehension+b%C3%A1sico" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 15</span><b>📖</b></div><h3>Lectura Crítica</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t29"><span>Tipos de texto</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+tipos+de+texto+lectura+cr%C3%ADtica" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t30"><span>Texto argumentativo</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+texto+argumentativo+ICFES" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 16</span><b>🧮</b></div><h3>Matemáticas</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t31"><span>Ecuaciones de primer grado</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+ecuaciones+de+primer+grado" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t32"><span>Planteamiento de problemas</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+planteamiento+de+ecuaciones+problemas" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 17</span><b>🧬</b></div><h3>Biología</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t33"><span>Ecosistemas</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+ecosistemas" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t34"><span>Cadenas alimenticias</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Cadenas+alimenticias+biolog%C3%ADa+ICFES" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 18</span><b>🧪</b></div><h3>Química</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t35"><span>Enlaces químicos</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+enlaces+qu%C3%ADmicos" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t36"><span>Compuestos químicos</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+compuestos+qu%C3%ADmicos" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 19</span><b>⚡</b></div><h3>Física</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t37"><span>Fuerza</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+fuerza+f%C3%ADsica" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t38"><span>Leyes de Newton</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+leyes+de+Newton" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 20</span><b>🌎</b></div><h3>Sociales</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t39"><span>Historia de Colombia</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Academia+Play+historia+de+Colombia" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t40"><span>Conflicto y paz</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Conflicto+y+paz+Colombia+ICFES+sociales" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 21</span><b>🇬🇧</b></div><h3>Inglés</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t41"><span>Present continuous</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+present+continuous" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t42"><span>Lectura con contexto</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+reading+comprehension+context" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 22</span><b>📖</b></div><h3>Lectura Crítica</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t43"><span>Tesis y argumentos</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+tesis+argumentos+lectura+cr%C3%ADtica" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t44"><span>Conclusiones</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+conclusiones+lectura+cr%C3%ADtica" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 23</span><b>🧮</b></div><h3>Matemáticas</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t45"><span>Geometría básica</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+geometr%C3%ADa+b%C3%A1sica" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t46"><span>Áreas y perímetros</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+%C3%A1reas+y+per%C3%ADmetros" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 24</span><b>🧬</b></div><h3>Biología</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t47"><span>Sistemas del cuerpo humano</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+sistemas+del+cuerpo+humano" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t48"><span>Homeostasis</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+homeostasis" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 25</span><b>🧪</b></div><h3>Química</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t49"><span>Reacciones químicas</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+reacciones+qu%C3%ADmicas" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t50"><span>Balanceo básico</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+balanceo+de+ecuaciones+qu%C3%ADmicas" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 26</span><b>⚡</b></div><h3>Física</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t51"><span>Trabajo y energía</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+trabajo+y+energ%C3%ADa+f%C3%ADsica" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t52"><span>Energía cinética y potencial</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+energ%C3%ADa+cin%C3%A9tica+y+potencial" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 27</span><b>🌎</b></div><h3>Sociales</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t53"><span>Economía básica</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Econom%C3%ADa+b%C3%A1sica+ICFES+sociales" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t54"><span>Globalización</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Academia+Play+globalizaci%C3%B3n" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 28</span><b>🇬🇧</b></div><h3>Inglés</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t55"><span>Conectores</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+connectors+English" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t56"><span>Comprensión de lectura</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+reading+comprehension" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 29</span><b>🧮</b></div><h3>Matemáticas</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t57"><span>Estadística</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+estad%C3%ADstica+b%C3%A1sica" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t58"><span>Promedio, mediana y moda</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+media+mediana+moda" target="_blank">🎥 Ver video recomendado</a></div></div></article>
-<article class="day-card"><div class="day-head"><span>Día 30</span><b>🔬</b></div><h3>Ciencias Naturales</h3><div class="topics"><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t59"><span>Interpretación de gráficas</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=Interpretaci%C3%B3n+de+gr%C3%A1ficas+ciencias+naturales+ICFES" target="_blank">🎥 Ver video recomendado</a></div><div class="topic-item"><label class="topic-check"><input type="checkbox" class="progress-check" data-task="t60"><span>Análisis de experimentos</span></label><a class="video-link" href="https://www.youtube.com/results?search_query=An%C3%A1lisis+de+experimentos+ciencias+naturales+ICFES" target="_blank">🎥 Ver video recomendado</a></div></div></article></div></section>
-<section class="section video-section" id="clases"><h2>🎥 Clase destacada</h2><p class="subtitle">Tu clase queda integrada directamente en la plataforma.</p><div class="video-card"><iframe src="https://www.youtube.com/embed/bo3ExGF0hjE" title="Clase Matemáticas ICFES" allowfullscreen></iframe><div><span class="tag">Matemáticas</span><h3>Preguntas ICFES explicadas paso a paso</h3><p>Clase práctica para aprender a analizar preguntas tipo Saber 11.</p></div></div></section>
-<section class="section" id="material"><h2>📂 PDFs y material de estudio</h2><p class="subtitle">Nombres normalizados para evitar errores 404.</p><div class="material-grid"><article class="material-card"><span class="tag">PDF</span><h3>Clase 1 Mates 260620 190655</h3><p>Material de apoyo listo para abrir.</p><a class="small-btn" href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank">📄 Abrir PDF</a></article></div></section>
-<section class="section" id="simulacros"><h2>📝 Mini simulacros</h2><p class="subtitle">Formularios organizados como mini simulacros.</p><div class="sim-grid"><article class="sim-card"><span>📝</span><h3>Mini simulacro 1</h3><p>Práctica tipo Saber 11.</p><a class="small-btn" href="https://forms.gle/H8V15DC2iFbXqsAr6" target="_blank">Resolver</a></article>
-<article class="sim-card"><span>📝</span><h3>Mini simulacro 2</h3><p>Práctica tipo Saber 11.</p><a class="small-btn" href="https://forms.gle/9ZR727bmNLUEY4qC7" target="_blank">Resolver</a></article>
-<article class="sim-card"><span>📝</span><h3>Mini simulacro 3</h3><p>Práctica tipo Saber 11.</p><a class="small-btn" href="https://forms.gle/nMJRPrBLggJDwjNv7" target="_blank">Resolver</a></article>
-<article class="sim-card"><span>📝</span><h3>Mini simulacro 4</h3><p>Práctica tipo Saber 11.</p><a class="small-btn" href="https://forms.gle/gAQCycMekwuRr1ha7" target="_blank">Resolver</a></article>
-<article class="sim-card"><span>📝</span><h3>Mini simulacro 5</h3><p>Práctica tipo Saber 11.</p><a class="small-btn" href="https://forms.gle/MrPaJbR9JZ7nNWB7A" target="_blank">Resolver</a></article></div></section>
-<section class="section course" id="curso"><div class="course-card"><span class="badge">🔥 Curso intensivo</span><h2>Prepárate con una ruta clara y acompañamiento</h2><p class="date">Del 29 de junio al 24 de julio</p><p>Curso diseñado para llegar al examen con seguridad, método y confianza.</p><div class="price">$200.000</div><div class="course-list"><p>✅ Clases en vivo y grabaciones disponibles</p><p>✅ Material PDF de estudio</p><p>✅ Mini simulacros tipo ICFES</p><p>✅ Calendario diario de 30 días</p><p>✅ Videos recomendados por tema</p><p>✅ Seguimiento de progreso</p></div><a class="btn primary" href="https://wa.me/573007540786" target="_blank">📲 Inscribirme por WhatsApp</a></div></section>
-</main><footer><strong>ICFES IQ500</strong><p>Preparación inteligente para estudiantes Saber 11 🇨🇴</p></footer><a class="float-wa" href="https://wa.me/573007540786" target="_blank">💬</a><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICFES IQ500 | Preparación Saber 11</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+
+  <nav class="navbar">
+    <a class="brand" href="#inicio">ICFES <span>IQ500</span></a>
+    <button id="menuBtn" class="menu-btn">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#temario">Temario</a>
+      <a href="#clases">Clases</a>
+      <a href="#material">Guías</a>
+      <a href="#simulacros">Mini simulacros</a>
+      <a href="#curso">Curso</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="inicio">
+    <section>
+      <span class="badge">🚀 Preparación inteligente Saber 11</span>
+      <h1>Estudia con orden y alcanza tu mejor puntaje en el ICFES</h1>
+      <p>Una ruta clara de 30 días: una sola materia por día, pocos temas, videos recomendados, guías en PDF y progreso visible para avanzar sin saturarte.</p>
+      <div class="actions">
+        <a class="btn primary" href="#temario">Ver calendario</a>
+        <a class="btn secondary" href="#curso">Curso intensivo</a>
+      </div>
+      <div class="stats">
+        <div><strong id="progressPercent">0%</strong><small>avance</small></div>
+        <div><strong id="points">0</strong><small>puntos IQ</small></div>
+        <div><strong>30</strong><small>días</small></div>
+      </div>
+    </section>
+
+    <aside class="hero-panel">
+      <h2>🎯 Tu progreso importa</h2>
+      <p>Marca cada tema completado. Tu avance se guarda automáticamente en este celular o computador aunque cierres la página.</p>
+      <div class="progress"><span id="progressBar"></span></div>
+      <small>Para guardar progreso entre varios dispositivos se puede conectar Firebase o Supabase.</small>
+    </aside>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>Una experiencia clara para estudiar</h2>
+      <p class="subtitle">El estudiante entra, mira el día, estudia los temas, abre sus guías y marca su avance.</p>
+      <div class="feature-grid">
+        <article><span>📅</span><h3>Un día, una materia</h3><p>Menos saturación y más enfoque.</p></article>
+        <article><span>🎥</span><h3>Videos recomendados</h3><p>Cada tema tiene un enlace directo a YouTube.</p></article>
+        <article><span>📚</span><h3>Guías teóricas</h3><p>PDFs en el calendario y también en una sección organizada.</p></article>
+        <article><span>🏆</span><h3>Puntos IQ500</h3><p>Cada tema completado suma puntos.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="temario">
+      <h2>📅 Temario de 30 días</h2>
+      <p class="subtitle">Una materia por día, pocos temas por jornada, videos recomendados y PDFs de apoyo cuando corresponda.</p>
+      <div class="calendar-grid">
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 1</span>
+            <b>📖</b>
+          </div>
+          <h3>Lectura Crítica</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t1">
+              <span>Idea principal</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+idea+principal+lectura+cr%C3%ADtica+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t2">
+              <span>Idea secundaria</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+idea+secundaria+lectura+cr%C3%ADtica+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 2</span>
+            <b>🧮</b>
+          </div>
+          <h3>Matemáticas</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t3">
+              <span>Razones y proporciones</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+razones+y+proporciones" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t4">
+              <span>Regla de tres</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+regla+de+tres" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+          <div class="day-pdfs">
+            <strong>Guías de apoyo para este día</strong>
+            <a href="pdfs/clase_1_mates_260620_190655_1.pdf" target="_blank" rel="noopener">📄 Clase 1 Mates 260620 190655</a>
+<a href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Clase 1 Mates 260620 190655</a>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 3</span>
+            <b>🧬</b>
+          </div>
+          <h3>Biología</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t5">
+              <span>La célula</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+la+c%C3%A9lula" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t6">
+              <span>Organelos celulares</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+organelos+celulares" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 4</span>
+            <b>🧪</b>
+          </div>
+          <h3>Química</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t7">
+              <span>La materia</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+la+materia+qu%C3%ADmica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t8">
+              <span>Propiedades físicas y químicas</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Quimitube+propiedades+f%C3%ADsicas+y+qu%C3%ADmicas" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 5</span>
+            <b>⚡</b>
+          </div>
+          <h3>Física</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t9">
+              <span>Magnitudes físicas</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+magnitudes+f%C3%ADsicas" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t10">
+              <span>Sistema Internacional</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+sistema+internacional+de+unidades" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 6</span>
+            <b>🌎</b>
+          </div>
+          <h3>Sociales</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t11">
+              <span>Constitución Política</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Constituci%C3%B3n+Pol%C3%ADtica+Colombia+ICFES+sociales" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t12">
+              <span>Derechos fundamentales</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Derechos+fundamentales+Colombia+ICFES+sociales" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 7</span>
+            <b>🇬🇧</b>
+          </div>
+          <h3>Inglés</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t13">
+              <span>Verb to be</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+verb+to+be" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t14">
+              <span>Present simple</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+present+simple" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 8</span>
+            <b>📖</b>
+          </div>
+          <h3>Lectura Crítica</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t15">
+              <span>Inferencias</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+inferencias+lectura+cr%C3%ADtica+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t16">
+              <span>Intención del autor</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+intenci%C3%B3n+del+autor+lectura+cr%C3%ADtica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 9</span>
+            <b>🧮</b>
+          </div>
+          <h3>Matemáticas</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t17">
+              <span>Porcentajes</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+porcentajes" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t18">
+              <span>Aumentos y descuentos</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+aumentos+descuentos+porcentajes" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+          <div class="day-pdfs">
+            <strong>Guías de apoyo para este día</strong>
+            <a href="pdfs/clase_1_mates_260620_190655_1.pdf" target="_blank" rel="noopener">📄 Clase 1 Mates 260620 190655</a>
+<a href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Clase 1 Mates 260620 190655</a>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 10</span>
+            <b>🧬</b>
+          </div>
+          <h3>Biología</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t19">
+              <span>ADN y ARN</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+ADN+ARN" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t20">
+              <span>Genética básica</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+gen%C3%A9tica+b%C3%A1sica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 11</span>
+            <b>🧪</b>
+          </div>
+          <h3>Química</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t21">
+              <span>Átomos</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+%C3%A1tomo+qu%C3%ADmica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t22">
+              <span>Tabla periódica</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+tabla+peri%C3%B3dica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 12</span>
+            <b>⚡</b>
+          </div>
+          <h3>Física</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t23">
+              <span>Movimiento rectilíneo uniforme</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+movimiento+rectil%C3%ADneo+uniforme" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t24">
+              <span>Velocidad y distancia</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+velocidad+distancia+tiempo" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 13</span>
+            <b>🌎</b>
+          </div>
+          <h3>Sociales</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t25">
+              <span>Estado colombiano</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Estado+colombiano+ICFES+sociales" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t26">
+              <span>Participación ciudadana</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Participaci%C3%B3n+ciudadana+ICFES+sociales" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 14</span>
+            <b>🇬🇧</b>
+          </div>
+          <h3>Inglés</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t27">
+              <span>Vocabulario básico</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+vocabulario+b%C3%A1sico+ingl%C3%A9s" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t28">
+              <span>Comprensión de textos cortos</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+reading+comprehension+b%C3%A1sico" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 15</span>
+            <b>📖</b>
+          </div>
+          <h3>Lectura Crítica</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t29">
+              <span>Tipos de texto</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+tipos+de+texto+lectura+cr%C3%ADtica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t30">
+              <span>Texto argumentativo</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+texto+argumentativo+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 16</span>
+            <b>🧮</b>
+          </div>
+          <h3>Matemáticas</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t31">
+              <span>Ecuaciones de primer grado</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+ecuaciones+de+primer+grado" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t32">
+              <span>Planteamiento de problemas</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+planteamiento+de+ecuaciones+problemas" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+          <div class="day-pdfs">
+            <strong>Guías de apoyo para este día</strong>
+            <a href="pdfs/clase_1_mates_260620_190655_1.pdf" target="_blank" rel="noopener">📄 Clase 1 Mates 260620 190655</a>
+<a href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Clase 1 Mates 260620 190655</a>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 17</span>
+            <b>🧬</b>
+          </div>
+          <h3>Biología</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t33">
+              <span>Ecosistemas</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+ecosistemas" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t34">
+              <span>Cadenas alimenticias</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Cadenas+alimenticias+biolog%C3%ADa+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 18</span>
+            <b>🧪</b>
+          </div>
+          <h3>Química</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t35">
+              <span>Enlaces químicos</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+enlaces+qu%C3%ADmicos" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t36">
+              <span>Compuestos químicos</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+compuestos+qu%C3%ADmicos" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 19</span>
+            <b>⚡</b>
+          </div>
+          <h3>Física</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t37">
+              <span>Fuerza</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+fuerza+f%C3%ADsica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t38">
+              <span>Leyes de Newton</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+leyes+de+Newton" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 20</span>
+            <b>🌎</b>
+          </div>
+          <h3>Sociales</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t39">
+              <span>Historia de Colombia</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Academia+Play+historia+de+Colombia" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t40">
+              <span>Conflicto y paz</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Conflicto+y+paz+Colombia+ICFES+sociales" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 21</span>
+            <b>🇬🇧</b>
+          </div>
+          <h3>Inglés</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t41">
+              <span>Present continuous</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+present+continuous" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t42">
+              <span>Lectura con contexto</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+reading+comprehension+context" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 22</span>
+            <b>📖</b>
+          </div>
+          <h3>Lectura Crítica</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t43">
+              <span>Tesis y argumentos</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+tesis+argumentos+lectura+cr%C3%ADtica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t44">
+              <span>Conclusiones</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+conclusiones+lectura+cr%C3%ADtica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 23</span>
+            <b>🧮</b>
+          </div>
+          <h3>Matemáticas</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t45">
+              <span>Geometría básica</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+geometr%C3%ADa+b%C3%A1sica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t46">
+              <span>Áreas y perímetros</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+%C3%A1reas+y+per%C3%ADmetros" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+          <div class="day-pdfs">
+            <strong>Guías de apoyo para este día</strong>
+            <a href="pdfs/clase_1_mates_260620_190655_1.pdf" target="_blank" rel="noopener">📄 Clase 1 Mates 260620 190655</a>
+<a href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Clase 1 Mates 260620 190655</a>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 24</span>
+            <b>🧬</b>
+          </div>
+          <h3>Biología</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t47">
+              <span>Sistemas del cuerpo humano</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+sistemas+del+cuerpo+humano" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t48">
+              <span>Homeostasis</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+homeostasis" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 25</span>
+            <b>🧪</b>
+          </div>
+          <h3>Química</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t49">
+              <span>Reacciones químicas</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+reacciones+qu%C3%ADmicas" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t50">
+              <span>Balanceo básico</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+balanceo+de+ecuaciones+qu%C3%ADmicas" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 26</span>
+            <b>⚡</b>
+          </div>
+          <h3>Física</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t51">
+              <span>Trabajo y energía</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+trabajo+y+energ%C3%ADa+f%C3%ADsica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t52">
+              <span>Energía cinética y potencial</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+energ%C3%ADa+cin%C3%A9tica+y+potencial" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 27</span>
+            <b>🌎</b>
+          </div>
+          <h3>Sociales</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t53">
+              <span>Economía básica</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Econom%C3%ADa+b%C3%A1sica+ICFES+sociales" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t54">
+              <span>Globalización</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Academia+Play+globalizaci%C3%B3n" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 28</span>
+            <b>🇬🇧</b>
+          </div>
+          <h3>Inglés</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t55">
+              <span>Conectores</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+connectors+English" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t56">
+              <span>Comprensión de lectura</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+reading+comprehension" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 29</span>
+            <b>🧮</b>
+          </div>
+          <h3>Matemáticas</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t57">
+              <span>Estadística</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+estad%C3%ADstica+b%C3%A1sica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t58">
+              <span>Promedio, mediana y moda</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+media+mediana+moda" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+          <div class="day-pdfs">
+            <strong>Guías de apoyo para este día</strong>
+            <a href="pdfs/clase_1_mates_260620_190655_1.pdf" target="_blank" rel="noopener">📄 Clase 1 Mates 260620 190655</a>
+<a href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Clase 1 Mates 260620 190655</a>
+          </div>
+        </article>
+        <article class="day-card">
+          <div class="day-head">
+            <span>Día 30</span>
+            <b>🔬</b>
+          </div>
+          <h3>Ciencias Naturales</h3>
+          <div class="topics">
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t59">
+              <span>Interpretación de gráficas</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Interpretaci%C3%B3n+de+gr%C3%A1ficas+ciencias+naturales+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+          <div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="t60">
+              <span>Análisis de experimentos</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=An%C3%A1lisis+de+experimentos+ciencias+naturales+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          
+        </article></div>
+    </section>
+
+    <section class="section video-section" id="clases">
+      <h2>🎥 Clase destacada</h2>
+      <p class="subtitle">Tu clase queda integrada directamente en la plataforma.</p>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/bo3ExGF0hjE" title="Clase Matemáticas ICFES" allowfullscreen></iframe>
+        <div>
+          <span class="tag">Matemáticas</span>
+          <h3>Preguntas ICFES explicadas paso a paso</h3>
+          <p>Clase práctica para aprender a analizar preguntas tipo Saber 11 y mejorar la estrategia de respuesta.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="material">
+      <h2>📚 Guías teóricas y material de estudio</h2>
+      <p class="subtitle">Todos los PDFs también quedan aquí, organizados por materia para encontrarlos rápido.</p>
+      
+      <div class="pdf-category">
+        <h3>🧮 Matemáticas</h3>
+        <div class="material-grid">
+          <article class="material-card">
+            <span class="tag">PDF</span>
+            <h3>Clase 1 Mates 260620 190655</h3>
+            <p>Guía teórica y material de estudio para reforzar conceptos.</p>
+            <a class="small-btn" href="pdfs/clase_1_mates_260620_190655_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
+          </article>
+
+          <article class="material-card">
+            <span class="tag">PDF</span>
+            <h3>Clase 1 Mates 260620 190655</h3>
+            <p>Guía teórica y material de estudio para reforzar conceptos.</p>
+            <a class="small-btn" href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
+          </article></div>
+      </div>
+    </section>
+
+    <section class="section" id="simulacros">
+      <h2>📝 Mini simulacros</h2>
+      <p class="subtitle">Formularios organizados como mini simulacros.</p>
+      <div class="sim-grid">
+        <article class="sim-card">
+          <span>📝</span>
+          <h3>Mini simulacro 1</h3>
+          <p>Practica preguntas tipo Saber 11 y revisa tu avance.</p>
+          <a class="small-btn" href="https://forms.gle/H8V15DC2iFbXqsAr6" target="_blank" rel="noopener">Resolver</a>
+        </article>
+
+        <article class="sim-card">
+          <span>📝</span>
+          <h3>Mini simulacro 2</h3>
+          <p>Practica preguntas tipo Saber 11 y revisa tu avance.</p>
+          <a class="small-btn" href="https://forms.gle/9ZR727bmNLUEY4qC7" target="_blank" rel="noopener">Resolver</a>
+        </article>
+
+        <article class="sim-card">
+          <span>📝</span>
+          <h3>Mini simulacro 3</h3>
+          <p>Practica preguntas tipo Saber 11 y revisa tu avance.</p>
+          <a class="small-btn" href="https://forms.gle/nMJRPrBLggJDwjNv7" target="_blank" rel="noopener">Resolver</a>
+        </article>
+
+        <article class="sim-card">
+          <span>📝</span>
+          <h3>Mini simulacro 4</h3>
+          <p>Practica preguntas tipo Saber 11 y revisa tu avance.</p>
+          <a class="small-btn" href="https://forms.gle/gAQCycMekwuRr1ha7" target="_blank" rel="noopener">Resolver</a>
+        </article>
+
+        <article class="sim-card">
+          <span>📝</span>
+          <h3>Mini simulacro 5</h3>
+          <p>Practica preguntas tipo Saber 11 y revisa tu avance.</p>
+          <a class="small-btn" href="https://forms.gle/MrPaJbR9JZ7nNWB7A" target="_blank" rel="noopener">Resolver</a>
+        </article></div>
+    </section>
+
+    <section class="section course" id="curso">
+      <div class="course-card">
+        <span class="badge">🔥 Curso intensivo</span>
+        <h2>Prepárate con una ruta clara y acompañamiento</h2>
+        <p class="date">Del 29 de junio al 24 de julio</p>
+        <p>Curso diseñado para llegar al examen con seguridad, método y confianza.</p>
+        <div class="price">$200.000</div>
+        <div class="course-list">
+          <p>✅ Clases en vivo y grabaciones disponibles</p>
+          <p>✅ Guías teóricas en PDF</p>
+          <p>✅ Mini simulacros tipo ICFES</p>
+          <p>✅ Calendario diario de 30 días</p>
+          <p>✅ Videos recomendados por tema</p>
+          <p>✅ Seguimiento de progreso</p>
+        </div>
+        <a class="btn primary" href="https://wa.me/573007540786" target="_blank" rel="noopener">📲 Inscribirme por WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>ICFES IQ500</strong>
+    <p>Preparación inteligente para estudiantes Saber 11 🇨🇴</p>
+  </footer>
+
+  <a class="float-wa" href="https://wa.me/573007540786" target="_blank" rel="noopener">💬</a>
+  <script src="script.js"></script>
+</body>
+</html>

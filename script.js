@@ -1,1 +1,41 @@
-const checks=[...document.querySelectorAll('.progress-check')];const progressPercent=document.getElementById('progressPercent');const progressBar=document.getElementById('progressBar');const points=document.getElementById('points');const menuBtn=document.getElementById('menuBtn');const navLinks=document.getElementById('navLinks');menuBtn?.addEventListener('click',()=>navLinks.classList.toggle('open'));function saved(){try{return JSON.parse(localStorage.getItem('iq500_video_progress')||'{}')}catch{return {}}}function save(){const d={};checks.forEach(c=>d[c.dataset.task]=c.checked);localStorage.setItem('iq500_video_progress',JSON.stringify(d))}function update(){const done=checks.filter(c=>c.checked).length,total=checks.length||1,p=Math.round(done/total*100);progressPercent.textContent=p+'%';progressBar.style.width=p+'%';points.textContent=done*50;checks.forEach(c=>{c.closest('.topic-check')?.classList.toggle('done',c.checked);c.closest('.topic-item')?.classList.toggle('done',c.checked)})}function load(){const d=saved();checks.forEach(c=>c.checked=!!d[c.dataset.task]);update()}checks.forEach(c=>c.addEventListener('change',()=>{save();update()}));load();
+const checks=[...document.querySelectorAll('.progress-check')];
+const progressPercent=document.getElementById('progressPercent');
+const progressBar=document.getElementById('progressBar');
+const points=document.getElementById('points');
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+
+menuBtn?.addEventListener('click',()=>navLinks.classList.toggle('open'));
+
+function saved(){
+  try{return JSON.parse(localStorage.getItem('iq500_video_progress')||'{}')}
+  catch{return {}}
+}
+
+function save(){
+  const d={};
+  checks.forEach(c=>d[c.dataset.task]=c.checked);
+  localStorage.setItem('iq500_video_progress',JSON.stringify(d));
+}
+
+function update(){
+  const done=checks.filter(c=>c.checked).length;
+  const total=checks.length||1;
+  const p=Math.round(done/total*100);
+  progressPercent.textContent=p+'%';
+  progressBar.style.width=p+'%';
+  points.textContent=done*50;
+  checks.forEach(c=>{
+    c.closest('.topic-check')?.classList.toggle('done',c.checked);
+    c.closest('.topic-item')?.classList.toggle('done',c.checked);
+  });
+}
+
+function load(){
+  const d=saved();
+  checks.forEach(c=>c.checked=!!d[c.dataset.task]);
+  update();
+}
+
+checks.forEach(c=>c.addEventListener('change',()=>{save();update()}));
+load();
