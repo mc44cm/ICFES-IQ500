@@ -7,1358 +7,737 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="orb orb1"></div>
-  <div class="orb orb2"></div>
-
+  <div class="orb orb1"></div><div class="orb orb2"></div>
   <nav class="navbar">
     <a class="brand" href="#inicio">ICFES <span>IQ500</span></a>
     <button id="menuBtn" class="menu-btn">☰</button>
     <div class="nav-links" id="navLinks">
-      <a href="#temario">Temario</a>
-      <a href="#clases">Clases</a>
+      <a href="#temario">Calendario</a>
       <a href="#material">Guías</a>
       <a href="#simulacros">Mini simulacros</a>
       <a href="#curso">Curso</a>
     </div>
   </nav>
-
   <header class="hero" id="inicio">
     <section>
       <span class="badge">🚀 Preparación inteligente Saber 11</span>
       <h1>Estudia con orden y alcanza tu mejor puntaje en el ICFES</h1>
-      <p>Una ruta clara de 30 días: una sola materia por día, pocos temas, videos recomendados y guías PDF alineadas únicamente con el tema correspondiente.</p>
-      <div class="actions">
-        <a class="btn primary" href="#temario">Ver calendario</a>
-        <a class="btn secondary" href="#curso">Curso intensivo</a>
-      </div>
-      <div class="stats">
-        <div><strong id="progressPercent">0%</strong><small>avance</small></div>
-        <div><strong id="points">0</strong><small>puntos IQ</small></div>
-        <div><strong>30</strong><small>días</small></div>
-      </div>
+      <p>Ruta clara de 30 días: una materia por día, pocos temas, videos recomendados y guías PDF ubicadas solo cuando corresponden al tema del día.</p>
+      <div class="actions"><a class="btn primary" href="#temario">Ver calendario</a><a class="btn secondary" href="#curso">Curso intensivo</a></div>
+      <div class="stats"><div><strong id="progressPercent">0%</strong><small>avance</small></div><div><strong id="points">0</strong><small>puntos IQ</small></div><div><strong>30</strong><small>días</small></div></div>
     </section>
-
-    <aside class="hero-panel">
-      <h2>🎯 Tu progreso importa</h2>
-      <p>Marca cada tema completado. Tu avance se guarda automáticamente en este celular o computador aunque cierres la página.</p>
-      <div class="progress"><span id="progressBar"></span></div>
-      <small>Para guardar progreso entre varios dispositivos se puede conectar Firebase o Supabase.</small>
-    </aside>
+    <aside class="hero-panel"><h2>🎯 Tu progreso importa</h2><p>Marca cada tema completado. Tu avance se guarda automáticamente en este celular o computador aunque cierres la página.</p><div class="progress"><span id="progressBar"></span></div><small>Para guardar progreso entre varios dispositivos se puede conectar Firebase o Supabase.</small></aside>
   </header>
-
   <main>
     <section class="section">
       <h2>Una experiencia clara para estudiar</h2>
-      <p class="subtitle">Los PDFs ya no aparecen repetidos en todos los días: están ubicados solo donde se alinean con la materia y el tema.</p>
-      <div class="feature-grid">
-        <article><span>📅</span><h3>Un día, una materia</h3><p>Menos saturación y más enfoque.</p></article>
-        <article><span>🎥</span><h3>Videos recomendados</h3><p>Cada tema tiene un enlace directo a YouTube.</p></article>
-        <article><span>📚</span><h3>Guías alineadas</h3><p>Cada PDF aparece en el día donde realmente sirve.</p></article>
-        <article><span>🏆</span><h3>Puntos IQ500</h3><p>Cada tema completado suma puntos.</p></article>
-      </div>
+      <p class="subtitle">Se corrigió la coherencia entre calendario, materias y PDFs. Ya no aparece la sección inferior día por día.</p>
+      <div class="feature-grid"><article><span>📅</span><h3>Un día, una materia</h3><p>Menos saturación y más enfoque.</p></article><article><span>🎥</span><h3>Videos recomendados</h3><p>Cada tema tiene enlace directo a YouTube.</p></article><article><span>📚</span><h3>Guías alineadas</h3><p>Cada PDF aparece solo donde realmente sirve.</p></article><article><span>🏆</span><h3>Puntos IQ500</h3><p>Cada tema completado suma puntos.</p></article></div>
     </section>
-
-    <section class="section" id="temario">
-      <h2>📅 Temario de 30 días</h2>
-      <p class="subtitle">Una materia por día, pocos temas por jornada, videos recomendados y PDFs solo cuando corresponden al día.</p>
-      <div class="calendar-grid">
-        <article class="day-card">
+    <section class="section" id="temario"><h2>📅 Temario de 30 días</h2><p class="subtitle">Una materia por día, pocos temas por jornada, videos recomendados y PDFs alineados con el contenido del día.</p><div class="calendar-grid"><article class="day-card">
           <div class="day-head"><span>Día 1</span><b>📖</b></div>
           <h3>Lectura Crítica</h3>
-          <div class="topics">
-          <div class="topic-item">
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t1">
+              <input type="checkbox" class="progress-check" data-task="d1t1">
               <span>Idea principal</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+idea+principal+lectura+cr%C3%ADtica+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+idea+principal+lectura+crítica+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div>
-          <div class="topic-item">
+<div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t2">
+              <input type="checkbox" class="progress-check" data-task="d1t2">
               <span>Idea secundaria</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+idea+secundaria+lectura+cr%C3%ADtica+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+idea+secundaria+lectura+crítica+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
+          <div class="day-pdfs empty-pdfs"><strong>Guías alineadas con este día</strong><p>Este día se trabaja con video, lectura y práctica guiada. No se asigna PDF porque no hay una guía específica alineada.</p></div>
+        </article>
+<article class="day-card">
+          <div class="day-head"><span>Día 2</span><b>🧮</b></div>
+          <h3>Matemáticas básicas</h3>
+          <div class="topics"><div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d2t1">
+              <span>Conjuntos numéricos</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+conjuntos+numéricos" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+<div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d2t2">
+              <span>Fracciones</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+fracciones" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
           <div class="day-pdfs">
             <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/ejercicios_en_clase_clase_1_biologia.pdf" target="_blank" rel="noopener">📄 Ejercicios en clase - Clase 1 Biologia</a>
-<a href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">📄 Ejercicios en clase - Clase 1 Quimica</a>
-<a href="pdfs/ejercicios_en_clase_clase_1.pdf" target="_blank" rel="noopener">📄 Ejercicios en clase - Clase 1</a>
-<a href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Práctica - Clase 1</a>
+            <a href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Matemáticas - Clase 1</a>
+<a href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Resumen Matemáticas - Clase 1</a>
           </div>
         </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 2</span><b>🧮</b></div>
-          <h3>Matemáticas</h3>
-          <div class="topics">
-          <div class="topic-item">
+<article class="day-card">
+          <div class="day-head"><span>Día 3</span><b>🧮</b></div>
+          <h3>Matemáticas básicas</h3>
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t3">
+              <input type="checkbox" class="progress-check" data-task="d3t1">
               <span>Razones y proporciones</span>
             </label>
             <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+razones+y+proporciones" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div>
-          <div class="topic-item">
+<div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t4">
+              <input type="checkbox" class="progress-check" data-task="d3t2">
               <span>Regla de tres</span>
             </label>
             <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+regla+de+tres" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
           <div class="day-pdfs">
             <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Clase 1 Mates 260620 190655</a>
+            <a href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Resumen Matemáticas - Clase 1</a>
+<a href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Práctica Matemáticas - Clase 1</a>
+<a href="pdfs/ejercicios_en_clase_clase_1.pdf" target="_blank" rel="noopener">📄 Ejercicios Matemáticas - Clase 1</a>
           </div>
         </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 3</span><b>🧬</b></div>
-          <h3>Biología</h3>
-          <div class="topics">
-          <div class="topic-item">
+<article class="day-card">
+          <div class="day-head"><span>Día 4</span><b>🧬</b></div>
+          <h3>Biología celular</h3>
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t5">
-              <span>La célula</span>
+              <input type="checkbox" class="progress-check" data-task="d4t1">
+              <span>Célula procariota y eucariota</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+la+c%C3%A9lula" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=biología+celular+Saber+11+célula+procariota+eucariota" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div>
-          <div class="topic-item">
+<div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t6">
+              <input type="checkbox" class="progress-check" data-task="d4t2">
               <span>Organelos celulares</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+organelos+celulares" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=organelos+celulares+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
           <div class="day-pdfs">
             <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Biologia - Clase 1</a>
-<a href="pdfs/ejercicios_en_clase_clase_1_biologia.pdf" target="_blank" rel="noopener">📄 Ejercicios en clase - Clase 1 Biologia</a>
-<a href="pdfs/taller_biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Taller Biologia - Clase 1</a>
+            <a href="pdfs/biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Biología - Clase 1: célula y metabolismo</a>
+<a href="pdfs/ejercicios_en_clase_clase_1_biologia.pdf" target="_blank" rel="noopener">📄 Ejercicios Biología - Clase 1</a>
+<a href="pdfs/taller_biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Taller Biología - Clase 1</a>
           </div>
         </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 4</span><b>🧪</b></div>
+<article class="day-card">
+          <div class="day-head"><span>Día 5</span><b>🧬</b></div>
+          <h3>Biología celular y metabolismo</h3>
+          <div class="topics"><div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d5t1">
+              <span>Transporte celular</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=transporte+celular+ósmosis+difusión+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+<div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d5t2">
+              <span>Fotosíntesis y respiración celular</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=fotosíntesis+respiración+celular+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          <div class="day-pdfs">
+            <strong>Guías alineadas con este día</strong>
+            <a href="pdfs/biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Biología - Clase 1: célula y metabolismo</a>
+<a href="pdfs/ejercicios_en_clase_clase_1_biologia.pdf" target="_blank" rel="noopener">📄 Ejercicios Biología - Clase 1</a>
+          </div>
+        </article>
+<article class="day-card">
+          <div class="day-head"><span>Día 6</span><b>⚗️</b></div>
           <h3>Química</h3>
-          <div class="topics">
-          <div class="topic-item">
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t7">
-              <span>La materia</span>
+              <input type="checkbox" class="progress-check" data-task="d6t1">
+              <span>Estados de la materia</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+la+materia+qu%C3%ADmica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=estados+de+la+materia+Saber+11+química" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div>
-          <div class="topic-item">
+<div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t8">
-              <span>Propiedades físicas y químicas</span>
+              <input type="checkbox" class="progress-check" data-task="d6t2">
+              <span>Densidad y cambios de estado</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Quimitube+propiedades+f%C3%ADsicas+y+qu%C3%ADmicas" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=densidad+cambios+de+estado+química+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
           <div class="day-pdfs">
             <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">📄 Ejercicios en clase - Clase 1 Quimica</a>
+            <a href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">📄 Ejercicios Química - Clase 1</a>
           </div>
         </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 5</span><b>⚡</b></div>
-          <h3>Física</h3>
-          <div class="topics">
-          <div class="topic-item">
+<article class="day-card">
+          <div class="day-head"><span>Día 7</span><b>📊</b></div>
+          <h3>Estadística</h3>
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t9">
-              <span>Magnitudes físicas</span>
+              <input type="checkbox" class="progress-check" data-task="d7t1">
+              <span>Tablas de frecuencia</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+magnitudes+f%C3%ADsicas" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=tablas+de+frecuencia+estadística+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div>
-          <div class="topic-item">
+<div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t10">
-              <span>Sistema Internacional</span>
+              <input type="checkbox" class="progress-check" data-task="d7t2">
+              <span>Gráficos estadísticos</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+sistema+internacional+de+unidades" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=gráficos+estadísticos+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
           <div class="day-pdfs">
             <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/fisica_clase_2.pdf" target="_blank" rel="noopener">📄 Fisica Clase 2</a>
+            <a href="pdfs/estadistica_clase_2.pdf" target="_blank" rel="noopener">📄 Estadística - Clase 2</a>
           </div>
         </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 6</span><b>🌎</b></div>
-          <h3>Sociales</h3>
-          <div class="topics">
-          <div class="topic-item">
+<article class="day-card">
+          <div class="day-head"><span>Día 8</span><b>📊</b></div>
+          <h3>Estadística</h3>
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t11">
-              <span>Constitución Política</span>
+              <input type="checkbox" class="progress-check" data-task="d8t1">
+              <span>Media, mediana y moda</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Constituci%C3%B3n+Pol%C3%ADtica+Colombia+ICFES+sociales" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=media+mediana+moda+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div>
-          <div class="topic-item">
+<div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t12">
-              <span>Derechos fundamentales</span>
+              <input type="checkbox" class="progress-check" data-task="d8t2">
+              <span>Probabilidad básica</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Derechos+fundamentales+Colombia+ICFES+sociales" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=probabilidad+básica+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
           <div class="day-pdfs">
             <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Práctica - Clase 1</a>
-<a href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Resumen - Clase 1</a>
+            <a href="pdfs/estadistica_clase_2.pdf" target="_blank" rel="noopener">📄 Estadística - Clase 2</a>
+<a href="pdfs/ejercicios_en_clase_clase_2.pdf" target="_blank" rel="noopener">📄 Ejercicios Estadística - Clase 2</a>
           </div>
         </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 7</span><b>🇬🇧</b></div>
-          <h3>Inglés</h3>
-          <div class="topics">
-          <div class="topic-item">
+<article class="day-card">
+          <div class="day-head"><span>Día 9</span><b>📐</b></div>
+          <h3>Geometría</h3>
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t13">
-              <span>Verb to be</span>
+              <input type="checkbox" class="progress-check" data-task="d9t1">
+              <span>Área y perímetro</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+verb+to+be" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=área+y+perímetro+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div>
-          <div class="topic-item">
+<div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t14">
-              <span>Present simple</span>
+              <input type="checkbox" class="progress-check" data-task="d9t2">
+              <span>Plano cartesiano</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+present+simple" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=plano+cartesiano+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
-        </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 8</span><b>📖</b></div>
-          <h3>Lectura Crítica</h3>
-          <div class="topics">
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t15">
-              <span>Inferencias</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+inferencias+lectura+cr%C3%ADtica+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div>
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t16">
-              <span>Intención del autor</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+intenci%C3%B3n+del+autor+lectura+cr%C3%ADtica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div></div>
-          
           <div class="day-pdfs">
             <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Práctica - Clase 1</a>
-<a href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Resumen - Clase 1</a>
+            <a href="pdfs/geometria_clase_3.pdf" target="_blank" rel="noopener">📄 Geometría - Clase 3</a>
           </div>
         </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 9</span><b>🧮</b></div>
-          <h3>Matemáticas</h3>
-          <div class="topics">
-          <div class="topic-item">
+<article class="day-card">
+          <div class="day-head"><span>Día 10</span><b>📐</b></div>
+          <h3>Geometría y trigonometría</h3>
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t17">
-              <span>Porcentajes</span>
+              <input type="checkbox" class="progress-check" data-task="d10t1">
+              <span>Pitágoras</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+porcentajes" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=teorema+de+Pitágoras+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div>
-          <div class="topic-item">
+<div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t18">
-              <span>Aumentos y descuentos</span>
+              <input type="checkbox" class="progress-check" data-task="d10t2">
+              <span>Ángulos y triángulos</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+aumentos+descuentos+porcentajes" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=ángulos+triángulos+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
           <div class="day-pdfs">
             <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Clase 1 Mates 260620 190655</a>
+            <a href="pdfs/geometria_clase_3.pdf" target="_blank" rel="noopener">📄 Geometría - Clase 3</a>
+<a href="pdfs/ejercicios_en_clase_clase_3.pdf" target="_blank" rel="noopener">📄 Ejercicios Geometría - Clase 3</a>
           </div>
         </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 10</span><b>🧬</b></div>
-          <h3>Biología</h3>
-          <div class="topics">
-          <div class="topic-item">
+<article class="day-card">
+          <div class="day-head"><span>Día 11</span><b>📈</b></div>
+          <h3>Álgebra y funciones</h3>
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t19">
-              <span>ADN y ARN</span>
+              <input type="checkbox" class="progress-check" data-task="d11t1">
+              <span>Relación y función</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+ADN+ARN" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=funciones+dominio+rango+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div>
-          <div class="topic-item">
+<div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t20">
-              <span>Genética básica</span>
+              <input type="checkbox" class="progress-check" data-task="d11t2">
+              <span>Dominio y rango</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+gen%C3%A9tica+b%C3%A1sica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=relación+y+función+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
           <div class="day-pdfs">
             <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Biologia - Clase 1</a>
-<a href="pdfs/ejercicios_en_clase_clase_1_biologia.pdf" target="_blank" rel="noopener">📄 Ejercicios en clase - Clase 1 Biologia</a>
-<a href="pdfs/taller_biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Taller Biologia - Clase 1</a>
+            <a href="pdfs/algebra_clase_4.pdf" target="_blank" rel="noopener">📄 Álgebra - Clase 4: funciones, dominio y rango</a>
           </div>
         </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 11</span><b>🧪</b></div>
-          <h3>Química</h3>
-          <div class="topics">
-          <div class="topic-item">
+<article class="day-card">
+          <div class="day-head"><span>Día 12</span><b>📈</b></div>
+          <h3>Álgebra y funciones</h3>
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t21">
-              <span>Átomos</span>
+              <input type="checkbox" class="progress-check" data-task="d12t1">
+              <span>Tipos de funciones</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+%C3%A1tomo+qu%C3%ADmica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=tipos+de+funciones+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div>
-          <div class="topic-item">
+<div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t22">
-              <span>Tabla periódica</span>
+              <input type="checkbox" class="progress-check" data-task="d12t2">
+              <span>Factorización</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+tabla+peri%C3%B3dica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=factorización+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
           <div class="day-pdfs">
             <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">📄 Ejercicios en clase - Clase 1 Quimica</a>
+            <a href="pdfs/algebra_clase_4.pdf" target="_blank" rel="noopener">📄 Álgebra - Clase 4: funciones, dominio y rango</a>
+<a href="pdfs/ejercicios_en_clase_clase_4.pdf" target="_blank" rel="noopener">📄 Ejercicios Álgebra - Clase 4</a>
           </div>
         </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 12</span><b>⚡</b></div>
-          <h3>Física</h3>
-          <div class="topics">
-          <div class="topic-item">
+<article class="day-card">
+          <div class="day-head"><span>Día 13</span><b>⚙️</b></div>
+          <h3>Física mecánica</h3>
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t23">
-              <span>Movimiento rectilíneo uniforme</span>
+              <input type="checkbox" class="progress-check" data-task="d13t1">
+              <span>Masa, peso y gravedad</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+movimiento+rectil%C3%ADneo+uniforme" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=masa+peso+gravedad+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div>
-          <div class="topic-item">
+<div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t24">
-              <span>Velocidad y distancia</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+velocidad+distancia+tiempo" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div></div>
-          
-          <div class="day-pdfs">
-            <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/fisica_clase_2.pdf" target="_blank" rel="noopener">📄 Fisica Clase 2</a>
-          </div>
-        </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 13</span><b>🌎</b></div>
-          <h3>Sociales</h3>
-          <div class="topics">
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t25">
-              <span>Estado colombiano</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Estado+colombiano+ICFES+sociales" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div>
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t26">
-              <span>Participación ciudadana</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Participaci%C3%B3n+ciudadana+ICFES+sociales" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div></div>
-          
-          <div class="day-pdfs">
-            <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Práctica - Clase 1</a>
-<a href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Resumen - Clase 1</a>
-          </div>
-        </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 14</span><b>🇬🇧</b></div>
-          <h3>Inglés</h3>
-          <div class="topics">
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t27">
-              <span>Vocabulario básico</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+vocabulario+b%C3%A1sico+ingl%C3%A9s" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div>
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t28">
-              <span>Comprensión de textos cortos</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+reading+comprehension+b%C3%A1sico" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div></div>
-          
-        </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 15</span><b>📖</b></div>
-          <h3>Lectura Crítica</h3>
-          <div class="topics">
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t29">
-              <span>Tipos de texto</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+tipos+de+texto+lectura+cr%C3%ADtica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div>
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t30">
-              <span>Texto argumentativo</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+texto+argumentativo+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div></div>
-          
-          <div class="day-pdfs">
-            <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Práctica - Clase 1</a>
-<a href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Resumen - Clase 1</a>
-          </div>
-        </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 16</span><b>🧮</b></div>
-          <h3>Matemáticas</h3>
-          <div class="topics">
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t31">
-              <span>Ecuaciones de primer grado</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+ecuaciones+de+primer+grado" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div>
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t32">
-              <span>Planteamiento de problemas</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+planteamiento+de+ecuaciones+problemas" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div></div>
-          
-          <div class="day-pdfs">
-            <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/algebra_clase_4.pdf" target="_blank" rel="noopener">📄 Algebra - Clase 4</a>
-<a href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Clase 1 Mates 260620 190655</a>
-          </div>
-        </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 17</span><b>🧬</b></div>
-          <h3>Biología</h3>
-          <div class="topics">
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t33">
-              <span>Ecosistemas</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+ecosistemas" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div>
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t34">
-              <span>Cadenas alimenticias</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Cadenas+alimenticias+biolog%C3%ADa+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div></div>
-          
-          <div class="day-pdfs">
-            <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/ejercicios_en_clase_biologia_clase_2.pdf" target="_blank" rel="noopener">📄 Ejercicios en clase - Biologia Clase 2</a>
-<a href="pdfs/taller_biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Taller Biologia - Clase 1</a>
-          </div>
-        </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 18</span><b>🧪</b></div>
-          <h3>Química</h3>
-          <div class="topics">
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t35">
-              <span>Enlaces químicos</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+enlaces+qu%C3%ADmicos" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div>
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t36">
-              <span>Compuestos químicos</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+compuestos+qu%C3%ADmicos" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div></div>
-          
-          <div class="day-pdfs">
-            <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">📄 Ejercicios en clase - Clase 1 Quimica</a>
-          </div>
-        </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 19</span><b>⚡</b></div>
-          <h3>Física</h3>
-          <div class="topics">
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t37">
-              <span>Fuerza</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+fuerza+f%C3%ADsica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div>
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t38">
+              <input type="checkbox" class="progress-check" data-task="d13t2">
               <span>Leyes de Newton</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+leyes+de+Newton" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=leyes+de+Newton+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
           <div class="day-pdfs">
             <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/fisica_clase_3.pdf" target="_blank" rel="noopener">📄 Fisica Clase 3</a>
+            <a href="pdfs/fisica_clase_3.pdf" target="_blank" rel="noopener">📄 Física - Clase 3: fuerzas, Newton y energía</a>
           </div>
         </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 20</span><b>🌎</b></div>
-          <h3>Sociales</h3>
-          <div class="topics">
-          <div class="topic-item">
+<article class="day-card">
+          <div class="day-head"><span>Día 14</span><b>⚙️</b></div>
+          <h3>Física mecánica</h3>
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t39">
-              <span>Historia de Colombia</span>
+              <input type="checkbox" class="progress-check" data-task="d14t1">
+              <span>Diagramas de fuerzas</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Academia+Play+historia+de+Colombia" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=diagrama+de+fuerzas+equilibrio+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div>
-          <div class="topic-item">
+<div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t40">
-              <span>Conflicto y paz</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Conflicto+y+paz+Colombia+ICFES+sociales" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div></div>
-          
-          <div class="day-pdfs">
-            <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Práctica - Clase 1</a>
-<a href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Resumen - Clase 1</a>
-          </div>
-        </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 21</span><b>🇬🇧</b></div>
-          <h3>Inglés</h3>
-          <div class="topics">
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t41">
-              <span>Present continuous</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+present+continuous" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div>
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t42">
-              <span>Lectura con contexto</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+reading+comprehension+context" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div></div>
-          
-        </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 22</span><b>📖</b></div>
-          <h3>Lectura Crítica</h3>
-          <div class="topics">
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t43">
-              <span>Tesis y argumentos</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+tesis+argumentos+lectura+cr%C3%ADtica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div>
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t44">
-              <span>Conclusiones</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Filadd+Colombia+conclusiones+lectura+cr%C3%ADtica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div></div>
-          
-          <div class="day-pdfs">
-            <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Práctica - Clase 1</a>
-<a href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Resumen - Clase 1</a>
-          </div>
-        </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 23</span><b>🧮</b></div>
-          <h3>Matemáticas</h3>
-          <div class="topics">
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t45">
-              <span>Geometría básica</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+geometr%C3%ADa+b%C3%A1sica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div>
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t46">
-              <span>Áreas y perímetros</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+%C3%A1reas+y+per%C3%ADmetros" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div></div>
-          
-          <div class="day-pdfs">
-            <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Clase 1 Mates 260620 190655</a>
-<a href="pdfs/geometria_clase_3.pdf" target="_blank" rel="noopener">📄 Geometría - Clase 3</a>
-          </div>
-        </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 24</span><b>🧬</b></div>
-          <h3>Biología</h3>
-          <div class="topics">
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t47">
-              <span>Sistemas del cuerpo humano</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+sistemas+del+cuerpo+humano" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div>
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t48">
-              <span>Homeostasis</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=La+Hiperactina+homeostasis" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div></div>
-          
-          <div class="day-pdfs">
-            <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/ejercicios_en_clase_biologia_clase_2.pdf" target="_blank" rel="noopener">📄 Ejercicios en clase - Biologia Clase 2</a>
-          </div>
-        </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 25</span><b>🧪</b></div>
-          <h3>Química</h3>
-          <div class="topics">
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t49">
-              <span>Reacciones químicas</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+reacciones+qu%C3%ADmicas" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div>
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t50">
-              <span>Balanceo básico</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Unicoos+balanceo+de+ecuaciones+qu%C3%ADmicas" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div></div>
-          
-          <div class="day-pdfs">
-            <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">📄 Ejercicios en clase - Clase 1 Quimica</a>
-          </div>
-        </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 26</span><b>⚡</b></div>
-          <h3>Física</h3>
-          <div class="topics">
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t51">
-              <span>Trabajo y energía</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+trabajo+y+energ%C3%ADa+f%C3%ADsica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div>
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t52">
+              <input type="checkbox" class="progress-check" data-task="d14t2">
               <span>Energía cinética y potencial</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+energ%C3%ADa+cin%C3%A9tica+y+potencial" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=energía+cinética+potencial+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
           <div class="day-pdfs">
             <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/fisica_clase_3.pdf" target="_blank" rel="noopener">📄 Fisica Clase 3</a>
+            <a href="pdfs/fisica_clase_3.pdf" target="_blank" rel="noopener">📄 Física - Clase 3: fuerzas, Newton y energía</a>
           </div>
         </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 27</span><b>🌎</b></div>
-          <h3>Sociales</h3>
-          <div class="topics">
-          <div class="topic-item">
+<article class="day-card">
+          <div class="day-head"><span>Día 15</span><b>🔌</b></div>
+          <h3>Física eléctrica</h3>
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t53">
-              <span>Economía básica</span>
+              <input type="checkbox" class="progress-check" data-task="d15t1">
+              <span>Carga, voltaje, corriente y resistencia</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Econom%C3%ADa+b%C3%A1sica+ICFES+sociales" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=ley+de+Ohm+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div>
-          <div class="topic-item">
+<div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t54">
-              <span>Globalización</span>
+              <input type="checkbox" class="progress-check" data-task="d15t2">
+              <span>Ley de Ohm</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Academia+Play+globalizaci%C3%B3n" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=corriente+voltaje+resistencia+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
           <div class="day-pdfs">
             <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Práctica - Clase 1</a>
-<a href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Resumen - Clase 1</a>
+            <a href="pdfs/fisica_clase_2.pdf" target="_blank" rel="noopener">📄 Física - Clase 2: Ley de Ohm y circuitos</a>
           </div>
         </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 28</span><b>🇬🇧</b></div>
-          <h3>Inglés</h3>
-          <div class="topics">
-          <div class="topic-item">
+<article class="day-card">
+          <div class="day-head"><span>Día 16</span><b>🔌</b></div>
+          <h3>Física eléctrica</h3>
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t55">
-              <span>Conectores</span>
+              <input type="checkbox" class="progress-check" data-task="d16t1">
+              <span>Circuitos en serie</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+connectors+English" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=circuitos+en+serie+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div>
-          <div class="topic-item">
+<div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t56">
-              <span>Comprensión de lectura</span>
+              <input type="checkbox" class="progress-check" data-task="d16t2">
+              <span>Circuitos en paralelo</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Alejo+Lopera+reading+comprehension" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=circuitos+en+paralelo+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
+          <div class="day-pdfs">
+            <strong>Guías alineadas con este día</strong>
+            <a href="pdfs/fisica_clase_2.pdf" target="_blank" rel="noopener">📄 Física - Clase 2: Ley de Ohm y circuitos</a>
+          </div>
         </article>
-        <article class="day-card">
+<article class="day-card">
+          <div class="day-head"><span>Día 17</span><b>📖</b></div>
+          <h3>Lectura Crítica</h3>
+          <div class="topics"><div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d17t1">
+              <span>Inferencias</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=inferencias+lectura+crítica+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+<div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d17t2">
+              <span>Intención comunicativa</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=intención+comunicativa+lectura+crítica+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          <div class="day-pdfs empty-pdfs"><strong>Guías alineadas con este día</strong><p>Este día se trabaja con video, lectura y práctica guiada. No se asigna PDF porque no hay una guía específica alineada.</p></div>
+        </article>
+<article class="day-card">
+          <div class="day-head"><span>Día 18</span><b>🧮</b></div>
+          <h3>Matemáticas práctica</h3>
+          <div class="topics"><div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d18t1">
+              <span>Porcentajes</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=porcentajes+ICFES+matemáticas" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+<div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d18t2">
+              <span>Proporcionalidad</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=proporcionalidad+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          <div class="day-pdfs">
+            <strong>Guías alineadas con este día</strong>
+            <a href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Resumen Matemáticas - Clase 1</a>
+<a href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Práctica Matemáticas - Clase 1</a>
+<a href="pdfs/ejercicios_en_clase_clase_1.pdf" target="_blank" rel="noopener">📄 Ejercicios Matemáticas - Clase 1</a>
+          </div>
+        </article>
+<article class="day-card">
+          <div class="day-head"><span>Día 19</span><b>🧬</b></div>
+          <h3>Biología avanzada</h3>
+          <div class="topics"><div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d19t1">
+              <span>Ciclo celular</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=ciclo+celular+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+<div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d19t2">
+              <span>Mitosis y meiosis</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=mitosis+meiosis+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          <div class="day-pdfs">
+            <strong>Guías alineadas con este día</strong>
+            <a href="pdfs/ejercicios_en_clase_biologia_clase_2.pdf" target="_blank" rel="noopener">📄 Ejercicios Biología - Clase 2</a>
+          </div>
+        </article>
+<article class="day-card">
+          <div class="day-head"><span>Día 20</span><b>🧬</b></div>
+          <h3>Biología avanzada</h3>
+          <div class="topics"><div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d20t1">
+              <span>Genética básica</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=genética+básica+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+<div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d20t2">
+              <span>Variabilidad genética</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=variabilidad+genética+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          <div class="day-pdfs">
+            <strong>Guías alineadas con este día</strong>
+            <a href="pdfs/ejercicios_en_clase_biologia_clase_2.pdf" target="_blank" rel="noopener">📄 Ejercicios Biología - Clase 2</a>
+          </div>
+        </article>
+<article class="day-card">
+          <div class="day-head"><span>Día 21</span><b>⚗️</b></div>
+          <h3>Química práctica</h3>
+          <div class="topics"><div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d21t1">
+              <span>Separación de mezclas</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=separación+de+mezclas+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+<div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d21t2">
+              <span>Interpretación de tablas y gráficas</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=gráficas+química+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          <div class="day-pdfs">
+            <strong>Guías alineadas con este día</strong>
+            <a href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">📄 Ejercicios Química - Clase 1</a>
+          </div>
+        </article>
+<article class="day-card">
+          <div class="day-head"><span>Día 22</span><b>📊</b></div>
+          <h3>Estadística práctica</h3>
+          <div class="topics"><div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d22t1">
+              <span>Conjuntos</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=conjuntos+estadística+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+<div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d22t2">
+              <span>Técnicas de conteo</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=técnicas+de+conteo+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          <div class="day-pdfs">
+            <strong>Guías alineadas con este día</strong>
+            <a href="pdfs/estadistica_clase_2.pdf" target="_blank" rel="noopener">📄 Estadística - Clase 2</a>
+<a href="pdfs/ejercicios_en_clase_clase_2.pdf" target="_blank" rel="noopener">📄 Ejercicios Estadística - Clase 2</a>
+          </div>
+        </article>
+<article class="day-card">
+          <div class="day-head"><span>Día 23</span><b>📐</b></div>
+          <h3>Geometría práctica</h3>
+          <div class="topics"><div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d23t1">
+              <span>Volumen</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=volumen+cuerpos+geométricos+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+<div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d23t2">
+              <span>Relaciones trigonométricas</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=trigonometría+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          <div class="day-pdfs">
+            <strong>Guías alineadas con este día</strong>
+            <a href="pdfs/geometria_clase_3.pdf" target="_blank" rel="noopener">📄 Geometría - Clase 3</a>
+<a href="pdfs/ejercicios_en_clase_clase_3.pdf" target="_blank" rel="noopener">📄 Ejercicios Geometría - Clase 3</a>
+          </div>
+        </article>
+<article class="day-card">
+          <div class="day-head"><span>Día 24</span><b>📈</b></div>
+          <h3>Álgebra práctica</h3>
+          <div class="topics"><div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d24t1">
+              <span>Funciones en contexto</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=funciones+en+contexto+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+<div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d24t2">
+              <span>Lectura de gráficas</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=lectura+de+gráficas+matemáticas+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          <div class="day-pdfs">
+            <strong>Guías alineadas con este día</strong>
+            <a href="pdfs/algebra_clase_4.pdf" target="_blank" rel="noopener">📄 Álgebra - Clase 4: funciones, dominio y rango</a>
+<a href="pdfs/ejercicios_en_clase_clase_4.pdf" target="_blank" rel="noopener">📄 Ejercicios Álgebra - Clase 4</a>
+          </div>
+        </article>
+<article class="day-card">
+          <div class="day-head"><span>Día 25</span><b>⚙️</b></div>
+          <h3>Física práctica</h3>
+          <div class="topics"><div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d25t1">
+              <span>Fuerza neta</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=fuerza+neta+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+<div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d25t2">
+              <span>Trabajo y energía</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=trabajo+y+energía+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          <div class="day-pdfs">
+            <strong>Guías alineadas con este día</strong>
+            <a href="pdfs/fisica_clase_3.pdf" target="_blank" rel="noopener">📄 Física - Clase 3: fuerzas, Newton y energía</a>
+          </div>
+        </article>
+<article class="day-card">
+          <div class="day-head"><span>Día 26</span><b>🔌</b></div>
+          <h3>Física práctica</h3>
+          <div class="topics"><div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d26t1">
+              <span>Ondas</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=ondas+Saber+11+física" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+<div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d26t2">
+              <span>Fuerzas eléctricas</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=fuerzas+eléctricas+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          <div class="day-pdfs">
+            <strong>Guías alineadas con este día</strong>
+            <a href="pdfs/fisica_clase_2.pdf" target="_blank" rel="noopener">📄 Física - Clase 2: Ley de Ohm y circuitos</a>
+          </div>
+        </article>
+<article class="day-card">
+          <div class="day-head"><span>Día 27</span><b>📖</b></div>
+          <h3>Lectura Crítica práctica</h3>
+          <div class="topics"><div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d27t1">
+              <span>Estructura del texto</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=estructura+textual+lectura+crítica+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+<div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d27t2">
+              <span>Argumentos y conclusiones</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=argumentos+conclusiones+lectura+crítica+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          <div class="day-pdfs empty-pdfs"><strong>Guías alineadas con este día</strong><p>Este día se trabaja con video, lectura y práctica guiada. No se asigna PDF porque no hay una guía específica alineada.</p></div>
+        </article>
+<article class="day-card">
+          <div class="day-head"><span>Día 28</span><b>🧪</b></div>
+          <h3>Repaso mixto ciencias</h3>
+          <div class="topics"><div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d28t1">
+              <span>Biología + química</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=repaso+ciencias+naturales+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+<div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d28t2">
+              <span>Física</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=preguntas+ciencias+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div></div>
+          <div class="day-pdfs">
+            <strong>Guías alineadas con este día</strong>
+            <a href="pdfs/biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Biología - Clase 1: célula y metabolismo</a>
+<a href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">📄 Ejercicios Química - Clase 1</a>
+<a href="pdfs/fisica_clase_2.pdf" target="_blank" rel="noopener">📄 Física - Clase 2: Ley de Ohm y circuitos</a>
+<a href="pdfs/fisica_clase_3.pdf" target="_blank" rel="noopener">📄 Física - Clase 3: fuerzas, Newton y energía</a>
+          </div>
+        </article>
+<article class="day-card">
           <div class="day-head"><span>Día 29</span><b>🧮</b></div>
-          <h3>Matemáticas</h3>
-          <div class="topics">
-          <div class="topic-item">
+          <h3>Repaso mixto matemáticas</h3>
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t57">
+              <input type="checkbox" class="progress-check" data-task="d29t1">
+              <span>Álgebra + geometría</span>
+            </label>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=repaso+matemáticas+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+          </div>
+<div class="topic-item">
+            <label class="topic-check">
+              <input type="checkbox" class="progress-check" data-task="d29t2">
               <span>Estadística</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+estad%C3%ADstica+b%C3%A1sica" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
-          </div>
-          <div class="topic-item">
-            <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t58">
-              <span>Promedio, mediana y moda</span>
-            </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Julioprofe+media+mediana+moda" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=preguntas+matemáticas+Saber+11" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
           <div class="day-pdfs">
             <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Clase 1 Mates 260620 190655</a>
+            <a href="pdfs/algebra_clase_4.pdf" target="_blank" rel="noopener">📄 Álgebra - Clase 4: funciones, dominio y rango</a>
+<a href="pdfs/geometria_clase_3.pdf" target="_blank" rel="noopener">📄 Geometría - Clase 3</a>
 <a href="pdfs/estadistica_clase_2.pdf" target="_blank" rel="noopener">📄 Estadística - Clase 2</a>
           </div>
         </article>
-        <article class="day-card">
-          <div class="day-head"><span>Día 30</span><b>🔬</b></div>
-          <h3>Ciencias Naturales</h3>
-          <div class="topics">
-          <div class="topic-item">
+<article class="day-card">
+          <div class="day-head"><span>Día 30</span><b>🏁</b></div>
+          <h3>Simulacro final</h3>
+          <div class="topics"><div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t59">
-              <span>Interpretación de gráficas</span>
+              <input type="checkbox" class="progress-check" data-task="d30t1">
+              <span>Repaso general</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=Interpretaci%C3%B3n+de+gr%C3%A1ficas+ciencias+naturales+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=simulacro+Saber+11+matemáticas" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div>
-          <div class="topic-item">
+<div class="topic-item">
             <label class="topic-check">
-              <input type="checkbox" class="progress-check" data-task="t60">
-              <span>Análisis de experimentos</span>
+              <input type="checkbox" class="progress-check" data-task="d30t2">
+              <span>Corrección de errores</span>
             </label>
-            <a class="video-link" href="https://www.youtube.com/results?search_query=An%C3%A1lisis+de+experimentos+ciencias+naturales+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
+            <a class="video-link" href="https://www.youtube.com/results?search_query=simulacro+ciencias+naturales+ICFES" target="_blank" rel="noopener">🎥 Ver video recomendado</a>
           </div></div>
-          
           <div class="day-pdfs">
             <strong>Guías alineadas con este día</strong>
-            <a href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Práctica - Clase 1</a>
-<a href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Resumen - Clase 1</a>
+            <a href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Práctica Matemáticas - Clase 1</a>
+<a href="pdfs/ejercicios_en_clase_clase_2.pdf" target="_blank" rel="noopener">📄 Ejercicios Estadística - Clase 2</a>
+<a href="pdfs/ejercicios_en_clase_clase_3.pdf" target="_blank" rel="noopener">📄 Ejercicios Geometría - Clase 3</a>
+<a href="pdfs/ejercicios_en_clase_clase_4.pdf" target="_blank" rel="noopener">📄 Ejercicios Álgebra - Clase 4</a>
+<a href="pdfs/ejercicios_en_clase_biologia_clase_2.pdf" target="_blank" rel="noopener">📄 Ejercicios Biología - Clase 2</a>
+<a href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">📄 Ejercicios Química - Clase 1</a>
           </div>
-        </article></div>
-    </section>
-
-    <section class="section video-section" id="clases">
-      <h2>🎥 Clase destacada</h2>
-      <p class="subtitle">Tu clase queda integrada directamente en la plataforma.</p>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/bo3ExGF0hjE" title="Clase Matemáticas ICFES" allowfullscreen></iframe>
-        <div>
-          <span class="tag">Matemáticas</span>
-          <h3>Preguntas ICFES explicadas paso a paso</h3>
-          <p>Clase práctica para aprender a analizar preguntas tipo Saber 11 y mejorar la estrategia de respuesta.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="material">
-      <h2>📚 Guías teóricas alineadas al plan</h2>
-      <p class="subtitle">Primero se muestran por día de estudio. Más abajo queda la biblioteca completa por materia.</p>
-      
-      <div class="pdf-category">
-        <h3>📖 Día 1 - Lectura Crítica</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Clase 1 Biologia</h3>
-            <p>Material alineado con Día 1 - Lectura Crítica.</p>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_clase_1_biologia.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Clase 1 Quimica</h3>
-            <p>Material alineado con Día 1 - Lectura Crítica.</p>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Clase 1</h3>
-            <p>Material alineado con Día 1 - Lectura Crítica.</p>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Práctica - Clase 1</h3>
-            <p>Material alineado con Día 1 - Lectura Crítica.</p>
-            <a class="small-btn" href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🧮 Día 2 - Matemáticas</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Clase 1 Mates 260620 190655</h3>
-            <p>Material alineado con Día 2 - Matemáticas.</p>
-            <a class="small-btn" href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🧬 Día 3 - Biología</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Biologia - Clase 1</h3>
-            <p>Material alineado con Día 3 - Biología.</p>
-            <a class="small-btn" href="pdfs/biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Clase 1 Biologia</h3>
-            <p>Material alineado con Día 3 - Biología.</p>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_clase_1_biologia.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Taller Biologia - Clase 1</h3>
-            <p>Material alineado con Día 3 - Biología.</p>
-            <a class="small-btn" href="pdfs/taller_biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🧪 Día 4 - Química</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Clase 1 Quimica</h3>
-            <p>Material alineado con Día 4 - Química.</p>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>⚡ Día 5 - Física</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Fisica Clase 2</h3>
-            <p>Material alineado con Día 5 - Física.</p>
-            <a class="small-btn" href="pdfs/fisica_clase_2.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🌎 Día 6 - Sociales</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Práctica - Clase 1</h3>
-            <p>Material alineado con Día 6 - Sociales.</p>
-            <a class="small-btn" href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Resumen - Clase 1</h3>
-            <p>Material alineado con Día 6 - Sociales.</p>
-            <a class="small-btn" href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>📖 Día 8 - Lectura Crítica</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Práctica - Clase 1</h3>
-            <p>Material alineado con Día 8 - Lectura Crítica.</p>
-            <a class="small-btn" href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Resumen - Clase 1</h3>
-            <p>Material alineado con Día 8 - Lectura Crítica.</p>
-            <a class="small-btn" href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🧮 Día 9 - Matemáticas</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Clase 1 Mates 260620 190655</h3>
-            <p>Material alineado con Día 9 - Matemáticas.</p>
-            <a class="small-btn" href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🧬 Día 10 - Biología</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Biologia - Clase 1</h3>
-            <p>Material alineado con Día 10 - Biología.</p>
-            <a class="small-btn" href="pdfs/biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Clase 1 Biologia</h3>
-            <p>Material alineado con Día 10 - Biología.</p>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_clase_1_biologia.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Taller Biologia - Clase 1</h3>
-            <p>Material alineado con Día 10 - Biología.</p>
-            <a class="small-btn" href="pdfs/taller_biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🧪 Día 11 - Química</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Clase 1 Quimica</h3>
-            <p>Material alineado con Día 11 - Química.</p>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>⚡ Día 12 - Física</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Fisica Clase 2</h3>
-            <p>Material alineado con Día 12 - Física.</p>
-            <a class="small-btn" href="pdfs/fisica_clase_2.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🌎 Día 13 - Sociales</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Práctica - Clase 1</h3>
-            <p>Material alineado con Día 13 - Sociales.</p>
-            <a class="small-btn" href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Resumen - Clase 1</h3>
-            <p>Material alineado con Día 13 - Sociales.</p>
-            <a class="small-btn" href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>📖 Día 15 - Lectura Crítica</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Práctica - Clase 1</h3>
-            <p>Material alineado con Día 15 - Lectura Crítica.</p>
-            <a class="small-btn" href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Resumen - Clase 1</h3>
-            <p>Material alineado con Día 15 - Lectura Crítica.</p>
-            <a class="small-btn" href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🧮 Día 16 - Matemáticas</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Algebra - Clase 4</h3>
-            <p>Material alineado con Día 16 - Matemáticas.</p>
-            <a class="small-btn" href="pdfs/algebra_clase_4.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Clase 1 Mates 260620 190655</h3>
-            <p>Material alineado con Día 16 - Matemáticas.</p>
-            <a class="small-btn" href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🧬 Día 17 - Biología</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Biologia Clase 2</h3>
-            <p>Material alineado con Día 17 - Biología.</p>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_biologia_clase_2.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Taller Biologia - Clase 1</h3>
-            <p>Material alineado con Día 17 - Biología.</p>
-            <a class="small-btn" href="pdfs/taller_biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🧪 Día 18 - Química</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Clase 1 Quimica</h3>
-            <p>Material alineado con Día 18 - Química.</p>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>⚡ Día 19 - Física</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Fisica Clase 3</h3>
-            <p>Material alineado con Día 19 - Física.</p>
-            <a class="small-btn" href="pdfs/fisica_clase_3.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🌎 Día 20 - Sociales</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Práctica - Clase 1</h3>
-            <p>Material alineado con Día 20 - Sociales.</p>
-            <a class="small-btn" href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Resumen - Clase 1</h3>
-            <p>Material alineado con Día 20 - Sociales.</p>
-            <a class="small-btn" href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>📖 Día 22 - Lectura Crítica</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Práctica - Clase 1</h3>
-            <p>Material alineado con Día 22 - Lectura Crítica.</p>
-            <a class="small-btn" href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Resumen - Clase 1</h3>
-            <p>Material alineado con Día 22 - Lectura Crítica.</p>
-            <a class="small-btn" href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🧮 Día 23 - Matemáticas</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Clase 1 Mates 260620 190655</h3>
-            <p>Material alineado con Día 23 - Matemáticas.</p>
-            <a class="small-btn" href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Geometría - Clase 3</h3>
-            <p>Material alineado con Día 23 - Matemáticas.</p>
-            <a class="small-btn" href="pdfs/geometria_clase_3.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🧬 Día 24 - Biología</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Biologia Clase 2</h3>
-            <p>Material alineado con Día 24 - Biología.</p>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_biologia_clase_2.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🧪 Día 25 - Química</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Clase 1 Quimica</h3>
-            <p>Material alineado con Día 25 - Química.</p>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>⚡ Día 26 - Física</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Fisica Clase 3</h3>
-            <p>Material alineado con Día 26 - Física.</p>
-            <a class="small-btn" href="pdfs/fisica_clase_3.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🌎 Día 27 - Sociales</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Práctica - Clase 1</h3>
-            <p>Material alineado con Día 27 - Sociales.</p>
-            <a class="small-btn" href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Resumen - Clase 1</h3>
-            <p>Material alineado con Día 27 - Sociales.</p>
-            <a class="small-btn" href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🧮 Día 29 - Matemáticas</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Clase 1 Mates 260620 190655</h3>
-            <p>Material alineado con Día 29 - Matemáticas.</p>
-            <a class="small-btn" href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Estadística - Clase 2</h3>
-            <p>Material alineado con Día 29 - Matemáticas.</p>
-            <a class="small-btn" href="pdfs/estadistica_clase_2.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <div class="pdf-category">
-        <h3>🔬 Día 30 - Ciencias Naturales</h3>
-        <div class="material-grid">
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Práctica - Clase 1</h3>
-            <p>Material alineado con Día 30 - Ciencias Naturales.</p>
-            <a class="small-btn" href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article>
-
-          <article class="material-card">
-            <span class="tag">PDF</span>
-            <h3>Resumen - Clase 1</h3>
-            <p>Material alineado con Día 30 - Ciencias Naturales.</p>
-            <a class="small-btn" href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir guía</a>
-          </article></div>
-      </div>
-      <h2 class="library-title">📂 Biblioteca completa por materia</h2>
-      <p class="subtitle">Todos los PDFs disponibles, agrupados por materia.</p>
-      
-      <div class="pdf-category library">
-        <h3>🧮 Matemáticas</h3>
-        <div class="material-grid">
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Algebra - Clase 4</h3>
-            <a class="small-btn" href="pdfs/algebra_clase_4.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article>
-
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Clase 1 Mates 260620 190655</h3>
-            <a class="small-btn" href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article>
-
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Estadística - Clase 2</h3>
-            <a class="small-btn" href="pdfs/estadistica_clase_2.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article>
-
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Geometría - Clase 3</h3>
-            <a class="small-btn" href="pdfs/geometria_clase_3.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article></div>
-      </div>
-      <div class="pdf-category library">
-        <h3>🧬 Biología</h3>
-        <div class="material-grid">
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Biologia - Clase 1</h3>
-            <a class="small-btn" href="pdfs/biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article>
-
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Biologia Clase 2</h3>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_biologia_clase_2.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article>
-
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Clase 1 Biologia</h3>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_clase_1_biologia.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article>
-
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Taller Biologia - Clase 1</h3>
-            <a class="small-btn" href="pdfs/taller_biologia_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article></div>
-      </div>
-      <div class="pdf-category library">
-        <h3>🧪 Química</h3>
-        <div class="material-grid">
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Clase 1 Quimica</h3>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article></div>
-      </div>
-      <div class="pdf-category library">
-        <h3>⚡ Física</h3>
-        <div class="material-grid">
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Fisica Clase 2</h3>
-            <a class="small-btn" href="pdfs/fisica_clase_2.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article>
-
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Fisica Clase 3</h3>
-            <a class="small-btn" href="pdfs/fisica_clase_3.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article></div>
-      </div>
-      <div class="pdf-category library">
-        <h3>📖 Guías generales</h3>
-        <div class="material-grid">
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Clase 1</h3>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article>
-
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Clase 2</h3>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_clase_2.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article>
-
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Clase 3</h3>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_clase_3.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article>
-
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Ejercicios en clase - Clase 4</h3>
-            <a class="small-btn" href="pdfs/ejercicios_en_clase_clase_4.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article>
-
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Práctica - Clase 1</h3>
-            <a class="small-btn" href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article>
-
-          <article class="material-card compact-card">
-            <span class="tag">PDF</span>
-            <h3>Resumen - Clase 1</h3>
-            <a class="small-btn" href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">📄 Abrir</a>
-          </article></div>
-      </div>
-    </section>
-
+        </article></div></section>
+    <section class="section" id="material"><h2>📂 Biblioteca completa por materia</h2><p class="subtitle">Esta biblioteca no repite el plan día por día; solo organiza los PDFs por materia para consulta rápida.</p><h3 class="library-subtitle">Matemáticas básicas</h3><div class="material-grid"><article class="material-card compact-card"><h3>Matemáticas - Clase 1</h3><a class="small-btn" href="pdfs/clase_1_mates_260620_190655.pdf" target="_blank" rel="noopener">Abrir PDF</a></article>
+<article class="material-card compact-card"><h3>Resumen Matemáticas - Clase 1</h3><a class="small-btn" href="pdfs/resumen_clase_1.pdf" target="_blank" rel="noopener">Abrir PDF</a></article>
+<article class="material-card compact-card"><h3>Práctica Matemáticas - Clase 1</h3><a class="small-btn" href="pdfs/practica_clase_1.pdf" target="_blank" rel="noopener">Abrir PDF</a></article>
+<article class="material-card compact-card"><h3>Ejercicios Matemáticas - Clase 1</h3><a class="small-btn" href="pdfs/ejercicios_en_clase_clase_1.pdf" target="_blank" rel="noopener">Abrir PDF</a></article></div>
+<h3 class="library-subtitle">Biología</h3><div class="material-grid"><article class="material-card compact-card"><h3>Biología - Clase 1: célula y metabolismo</h3><a class="small-btn" href="pdfs/biologia_clase_1.pdf" target="_blank" rel="noopener">Abrir PDF</a></article>
+<article class="material-card compact-card"><h3>Ejercicios Biología - Clase 1</h3><a class="small-btn" href="pdfs/ejercicios_en_clase_clase_1_biologia.pdf" target="_blank" rel="noopener">Abrir PDF</a></article>
+<article class="material-card compact-card"><h3>Taller Biología - Clase 1</h3><a class="small-btn" href="pdfs/taller_biologia_clase_1.pdf" target="_blank" rel="noopener">Abrir PDF</a></article>
+<article class="material-card compact-card"><h3>Ejercicios Biología - Clase 2</h3><a class="small-btn" href="pdfs/ejercicios_en_clase_biologia_clase_2.pdf" target="_blank" rel="noopener">Abrir PDF</a></article></div>
+<h3 class="library-subtitle">Química</h3><div class="material-grid"><article class="material-card compact-card"><h3>Ejercicios Química - Clase 1</h3><a class="small-btn" href="pdfs/ejercicios_en_clase_clase_1_quimica.pdf" target="_blank" rel="noopener">Abrir PDF</a></article></div>
+<h3 class="library-subtitle">Estadística</h3><div class="material-grid"><article class="material-card compact-card"><h3>Estadística - Clase 2</h3><a class="small-btn" href="pdfs/estadistica_clase_2.pdf" target="_blank" rel="noopener">Abrir PDF</a></article>
+<article class="material-card compact-card"><h3>Ejercicios Estadística - Clase 2</h3><a class="small-btn" href="pdfs/ejercicios_en_clase_clase_2.pdf" target="_blank" rel="noopener">Abrir PDF</a></article></div>
+<h3 class="library-subtitle">Geometría</h3><div class="material-grid"><article class="material-card compact-card"><h3>Geometría - Clase 3</h3><a class="small-btn" href="pdfs/geometria_clase_3.pdf" target="_blank" rel="noopener">Abrir PDF</a></article>
+<article class="material-card compact-card"><h3>Ejercicios Geometría - Clase 3</h3><a class="small-btn" href="pdfs/ejercicios_en_clase_clase_3.pdf" target="_blank" rel="noopener">Abrir PDF</a></article></div>
+<h3 class="library-subtitle">Álgebra</h3><div class="material-grid"><article class="material-card compact-card"><h3>Álgebra - Clase 4: funciones, dominio y rango</h3><a class="small-btn" href="pdfs/algebra_clase_4.pdf" target="_blank" rel="noopener">Abrir PDF</a></article>
+<article class="material-card compact-card"><h3>Ejercicios Álgebra - Clase 4</h3><a class="small-btn" href="pdfs/ejercicios_en_clase_clase_4.pdf" target="_blank" rel="noopener">Abrir PDF</a></article></div>
+<h3 class="library-subtitle">Física</h3><div class="material-grid"><article class="material-card compact-card"><h3>Física - Clase 3: fuerzas, Newton y energía</h3><a class="small-btn" href="pdfs/fisica_clase_3.pdf" target="_blank" rel="noopener">Abrir PDF</a></article>
+<article class="material-card compact-card"><h3>Física - Clase 2: Ley de Ohm y circuitos</h3><a class="small-btn" href="pdfs/fisica_clase_2.pdf" target="_blank" rel="noopener">Abrir PDF</a></article></div>
+</section>
     <section class="section" id="simulacros">
       <h2>📝 Mini simulacros</h2>
       <p class="subtitle">Formularios organizados como mini simulacros.</p>
       <div class="sim-grid">
-        <article class="sim-card">
-          <span>📝</span>
-          <h3>Mini simulacro 1</h3>
-          <p>Practica preguntas tipo Saber 11 y revisa tu avance.</p>
-          <a class="small-btn" href="https://forms.gle/H8V15DC2iFbXqsAr6" target="_blank" rel="noopener">Resolver</a>
-        </article>
-
-        <article class="sim-card">
-          <span>📝</span>
-          <h3>Mini simulacro 2</h3>
-          <p>Practica preguntas tipo Saber 11 y revisa tu avance.</p>
-          <a class="small-btn" href="https://forms.gle/9ZR727bmNLUEY4qC7" target="_blank" rel="noopener">Resolver</a>
-        </article>
-
-        <article class="sim-card">
-          <span>📝</span>
-          <h3>Mini simulacro 3</h3>
-          <p>Practica preguntas tipo Saber 11 y revisa tu avance.</p>
-          <a class="small-btn" href="https://forms.gle/nMJRPrBLggJDwjNv7" target="_blank" rel="noopener">Resolver</a>
-        </article>
-
-        <article class="sim-card">
-          <span>📝</span>
-          <h3>Mini simulacro 4</h3>
-          <p>Practica preguntas tipo Saber 11 y revisa tu avance.</p>
-          <a class="small-btn" href="https://forms.gle/gAQCycMekwuRr1ha7" target="_blank" rel="noopener">Resolver</a>
-        </article>
-
-        <article class="sim-card">
-          <span>📝</span>
-          <h3>Mini simulacro 5</h3>
-          <p>Practica preguntas tipo Saber 11 y revisa tu avance.</p>
-          <a class="small-btn" href="https://forms.gle/MrPaJbR9JZ7nNWB7A" target="_blank" rel="noopener">Resolver</a>
-        </article></div>
+        <article class="sim-card"><span>📝</span><h3>Mini simulacro 1</h3><p>Practica preguntas tipo Saber 11 y revisa tu avance.</p><a class="small-btn" href="https://forms.gle/H8V15DC2iFbXqsAr6" target="_blank" rel="noopener">Resolver</a></article>
+        <article class="sim-card"><span>📝</span><h3>Mini simulacro 2</h3><p>Practica preguntas tipo Saber 11 y revisa tu avance.</p><a class="small-btn" href="https://forms.gle/9ZR727bmNLUEY4qC7" target="_blank" rel="noopener">Resolver</a></article>
+        <article class="sim-card"><span>📝</span><h3>Mini simulacro 3</h3><p>Practica preguntas tipo Saber 11 y revisa tu avance.</p><a class="small-btn" href="https://forms.gle/nMJRPrBLggJDwjNv7" target="_blank" rel="noopener">Resolver</a></article>
+        <article class="sim-card"><span>📝</span><h3>Mini simulacro 4</h3><p>Practica preguntas tipo Saber 11 y revisa tu avance.</p><a class="small-btn" href="https://forms.gle/gAQCycMekwuRr1ha7" target="_blank" rel="noopener">Resolver</a></article>
+        <article class="sim-card"><span>📝</span><h3>Mini simulacro 5</h3><p>Practica preguntas tipo Saber 11 y revisa tu avance.</p><a class="small-btn" href="https://forms.gle/MrPaJbR9JZ7nNWB7A" target="_blank" rel="noopener">Resolver</a></article>
+      </div>
     </section>
-
     <section class="section course" id="curso">
       <div class="course-card">
         <span class="badge">🔥 Curso intensivo</span>
@@ -1378,12 +757,7 @@
       </div>
     </section>
   </main>
-
-  <footer>
-    <strong>ICFES IQ500</strong>
-    <p>Preparación inteligente para estudiantes Saber 11 🇨🇴</p>
-  </footer>
-
+  <footer><strong>ICFES IQ500</strong><p>Preparación inteligente para estudiantes Saber 11 🇨🇴</p></footer>
   <a class="float-wa" href="https://wa.me/573007540786" target="_blank" rel="noopener">💬</a>
   <script src="script.js"></script>
 </body>

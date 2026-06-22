@@ -1,26 +1,16 @@
-# ICFES IQ500 - PDFs alineados
+# ICFES IQ500 - versión corregida
 
-## Cambios de esta versión
+Cambios realizados:
 
-- Los PDFs ya no aparecen todos en todos los días.
-- Cada PDF aparece solo en los días donde se alinea con la materia/tema.
-- La sección inferior de PDFs está organizada primero por día del plan.
-- También queda una biblioteca completa por materia.
-- Se mantiene el progreso guardado con `iq500_video_progress`.
+- Las guías del calendario ahora corresponden con la materia y los temas de cada día.
+- Se eliminó la sección inferior que presentaba el material día por día después del calendario.
+- Se dejó solo una biblioteca completa organizada por materia.
+- Los PDFs están dentro de la carpeta `pdfs`.
+- Se conserva el progreso con `iq500_video_progress`.
 
-## PDFs incluidos
-
-Total sin duplicados por contenido: 17
-
-## Cómo subir a GitHub
+Para subir a GitHub Pages:
 
 1. Descomprime este ZIP.
-2. Sube el contenido, no el ZIP cerrado.
-3. En la raíz deben quedar:
-   - index.html
-   - style.css
-   - script.js
-   - README.md
-   - carpeta pdfs
-4. Commit changes.
-5. Settings > Pages > Deploy from branch > main > root.
+2. Sube el contenido completo a tu repositorio.
+3. Verifica que en la raíz estén `index.html`, `style.css`, `script.js`, `README.md` y la carpeta `pdfs`.
+4. Activa Pages desde `Settings > Pages > Deploy from branch > main > root`.
