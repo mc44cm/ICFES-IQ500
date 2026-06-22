@@ -14,3 +14,8 @@ Para subir a GitHub Pages:
 2. Sube el contenido completo a tu repositorio.
 3. Verifica que en la raíz estén `index.html`, `style.css`, `script.js`, `README.md` y la carpeta `pdfs`.
 4. Activa Pages desde `Settings > Pages > Deploy from branch > main > root`.
+
+
+## Corrección adicional
+
+- Se restauró la sección de Clase en vivo / grabación destacada con redirección a YouTube.
